@@ -18,12 +18,12 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
     public PantallaPrincipal() {
         initComponents();
-        originalIcon = (ImageIcon) labelMiniatura1.getIcon();
-        originalIcon2 = (ImageIcon) labelMiniatura2.getIcon();
-        originalIcon3 = (ImageIcon) labelMiniatura3.getIcon();
-        originalIcon4 = (ImageIcon) labelMiniatura4.getIcon();
-        originalIcon5 = (ImageIcon) labelMiniatura5.getIcon();
-        originalIcon6 = (ImageIcon) labelMiniatura6.getIcon();
+        originalIcon = (ImageIcon) labelMiniatura0.getIcon();
+        originalIcon2 = (ImageIcon) labelMiniatura1.getIcon();
+        originalIcon3 = (ImageIcon) labelMiniatura2.getIcon();
+        originalIcon4 = (ImageIcon) labelMiniatura3.getIcon();
+        originalIcon5 = (ImageIcon) labelMiniatura4.getIcon();
+        originalIcon6 = (ImageIcon) labelMiniatura5.getIcon();
 
     }
 
@@ -38,27 +38,27 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        labelMiniatura0 = new javax.swing.JLabel();
+        labelMiniatura2 = new javax.swing.JLabel();
         labelMiniatura1 = new javax.swing.JLabel();
         labelMiniatura3 = new javax.swing.JLabel();
-        labelMiniatura2 = new javax.swing.JLabel();
         labelMiniatura4 = new javax.swing.JLabel();
         labelMiniatura5 = new javax.swing.JLabel();
-        labelMiniatura6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        icon0 = new javax.swing.JLabel();
+        icon1 = new javax.swing.JLabel();
+        icon2 = new javax.swing.JLabel();
+        icon3 = new javax.swing.JLabel();
+        icon4 = new javax.swing.JLabel();
+        icon5 = new javax.swing.JLabel();
+        icon6 = new javax.swing.JLabel();
+        icon7 = new javax.swing.JLabel();
+        icon8 = new javax.swing.JLabel();
+        icon9 = new javax.swing.JLabel();
+        icon10 = new javax.swing.JLabel();
+        icon11 = new javax.swing.JLabel();
+        icon12 = new javax.swing.JLabel();
+        icon13 = new javax.swing.JLabel();
         btnSalir = new javax.swing.JButton();
         btnGame = new javax.swing.JButton();
         labelFondoBase = new javax.swing.JLabel();
@@ -68,7 +68,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(1920, 1080));
         setMinimumSize(new java.awt.Dimension(1920, 1080));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1920, 1080));
         setResizable(false);
         setSize(new java.awt.Dimension(1920, 1080));
         setType(java.awt.Window.Type.UTILITY);
@@ -81,33 +80,20 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         jPanel3.setOpaque(false);
 
-        labelMiniatura1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMiniatura1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton0.png"))); // NOI18N
-        labelMiniatura1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        labelMiniatura1.addMouseListener(new java.awt.event.MouseAdapter() {
+        labelMiniatura0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelMiniatura0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton0.png"))); // NOI18N
+        labelMiniatura0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelMiniatura0.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                labelMiniatura1MouseEntered(evt);
+                labelMiniatura0MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                labelMiniatura1MouseExited(evt);
-            }
-        });
-
-        labelMiniatura3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMiniatura3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton2.png"))); // NOI18N
-        labelMiniatura3.setAutoscrolls(true);
-        labelMiniatura3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        labelMiniatura3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                labelMiniatura3MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                labelMiniatura3MouseExited(evt);
+                labelMiniatura0MouseExited(evt);
             }
         });
 
         labelMiniatura2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMiniatura2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton1.png"))); // NOI18N
+        labelMiniatura2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton2.png"))); // NOI18N
         labelMiniatura2.setAutoscrolls(true);
         labelMiniatura2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         labelMiniatura2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -119,8 +105,34 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        labelMiniatura1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelMiniatura1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton1.png"))); // NOI18N
+        labelMiniatura1.setAutoscrolls(true);
+        labelMiniatura1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelMiniatura1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                labelMiniatura1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                labelMiniatura1MouseExited(evt);
+            }
+        });
+
+        labelMiniatura3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelMiniatura3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton3.png"))); // NOI18N
+        labelMiniatura3.setAutoscrolls(true);
+        labelMiniatura3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelMiniatura3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                labelMiniatura3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                labelMiniatura3MouseExited(evt);
+            }
+        });
+
         labelMiniatura4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMiniatura4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton3.png"))); // NOI18N
+        labelMiniatura4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton4.png"))); // NOI18N
         labelMiniatura4.setAutoscrolls(true);
         labelMiniatura4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         labelMiniatura4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -133,7 +145,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         });
 
         labelMiniatura5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMiniatura5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton4.png"))); // NOI18N
+        labelMiniatura5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton5.png"))); // NOI18N
         labelMiniatura5.setAutoscrolls(true);
         labelMiniatura5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         labelMiniatura5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -145,19 +157,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        labelMiniatura6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMiniatura6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton5.png"))); // NOI18N
-        labelMiniatura6.setAutoscrolls(true);
-        labelMiniatura6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        labelMiniatura6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                labelMiniatura6MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                labelMiniatura6MouseExited(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -165,20 +164,20 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(56, 56, 56)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(labelMiniatura4, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelMiniatura1, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelMiniatura3, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelMiniatura0, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(labelMiniatura2, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelMiniatura1, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addComponent(labelMiniatura5, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelMiniatura4, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelMiniatura3, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelMiniatura6, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelMiniatura2, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelMiniatura5, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(70, 70, 70))
         );
         jPanel3Layout.setVerticalGroup(
@@ -186,14 +185,14 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelMiniatura1, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMiniatura2, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelMiniatura3, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelMiniatura1, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelMiniatura0, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelMiniatura5, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMiniatura4, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelMiniatura6, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelMiniatura3, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelMiniatura5, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(55, 55, 55))
         );
 
@@ -201,47 +200,47 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         jPanel2.setOpaque(false);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton8.png"))); // NOI18N
-        jPanel2.add(jLabel1);
+        icon0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton8.png"))); // NOI18N
+        jPanel2.add(icon0);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton0.png"))); // NOI18N
-        jPanel2.add(jLabel2);
+        icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton0.png"))); // NOI18N
+        jPanel2.add(icon1);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton1.png"))); // NOI18N
-        jPanel2.add(jLabel3);
+        icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton1.png"))); // NOI18N
+        jPanel2.add(icon2);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton2.png"))); // NOI18N
-        jPanel2.add(jLabel4);
+        icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton2.png"))); // NOI18N
+        jPanel2.add(icon3);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton3.png"))); // NOI18N
-        jPanel2.add(jLabel5);
+        icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton3.png"))); // NOI18N
+        jPanel2.add(icon4);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton4.png"))); // NOI18N
-        jPanel2.add(jLabel6);
+        icon5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton4.png"))); // NOI18N
+        jPanel2.add(icon5);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton5.png"))); // NOI18N
-        jPanel2.add(jLabel7);
+        icon6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton5.png"))); // NOI18N
+        jPanel2.add(icon6);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton6.png"))); // NOI18N
-        jPanel2.add(jLabel8);
+        icon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton6.png"))); // NOI18N
+        jPanel2.add(icon7);
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton7.png"))); // NOI18N
-        jPanel2.add(jLabel9);
+        icon8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton7.png"))); // NOI18N
+        jPanel2.add(icon8);
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton13.png"))); // NOI18N
-        jPanel2.add(jLabel10);
+        icon9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton13.png"))); // NOI18N
+        jPanel2.add(icon9);
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton9.png"))); // NOI18N
-        jPanel2.add(jLabel11);
+        icon10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton9.png"))); // NOI18N
+        jPanel2.add(icon10);
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton10.png"))); // NOI18N
-        jPanel2.add(jLabel12);
+        icon11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton10.png"))); // NOI18N
+        jPanel2.add(icon11);
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton11.png"))); // NOI18N
-        jPanel2.add(jLabel13);
+        icon12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton11.png"))); // NOI18N
+        jPanel2.add(icon12);
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton12.png"))); // NOI18N
-        jPanel2.add(jLabel14);
+        icon13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazBase/Escudos/LauncherButton12.png"))); // NOI18N
+        jPanel2.add(icon13);
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 1550, 130));
 
@@ -279,9 +278,9 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         new PantallaGame().setVisible(true);
     }//GEN-LAST:event_btnGameActionPerformed
 
-    private void labelMiniatura1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MouseEntered
+    private void labelMiniatura0MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura0MouseEntered
         // Obtener la imagen actual del JLabel
-        ImageIcon currentIcon = (ImageIcon) labelMiniatura1.getIcon();
+        ImageIcon currentIcon = (ImageIcon) labelMiniatura0.getIcon();
         Image currentImage = currentIcon.getImage();
 
         // Escalar la imagen cuando el ratón entra en el JLabel
@@ -289,49 +288,49 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         ImageIcon scaledIcon = new ImageIcon(scaledImage);
 
         // Establecer la imagen escalada en el JLabel
-        labelMiniatura1.setIcon(scaledIcon);
+        labelMiniatura0.setIcon(scaledIcon);
 
-    }//GEN-LAST:event_labelMiniatura1MouseEntered
+    }//GEN-LAST:event_labelMiniatura0MouseEntered
 
-    private void labelMiniatura1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MouseExited
-        labelMiniatura1.setIcon(originalIcon); // Reemplaza 'iconOriginal' con tu ícono original
+    private void labelMiniatura0MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura0MouseExited
+        labelMiniatura0.setIcon(originalIcon); // Reemplaza 'iconOriginal' con tu ícono original
 
-    }//GEN-LAST:event_labelMiniatura1MouseExited
-
-    private void labelMiniatura3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura3MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon currentIcon = (ImageIcon) labelMiniatura3.getIcon();
-        Image currentImage = currentIcon.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledImage = currentImage.getScaledInstance(450, 350, Image.SCALE_SMOOTH);
-        ImageIcon scaledIcon = new ImageIcon(scaledImage);
-
-        // Establecer la imagen escalada en el JLabel
-        labelMiniatura3.setIcon(scaledIcon);
-    }//GEN-LAST:event_labelMiniatura3MouseEntered
-
-    private void labelMiniatura3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura3MouseExited
-        labelMiniatura3.setIcon(originalIcon); // Reemplaza 'iconOriginal' con tu ícono original
-    }//GEN-LAST:event_labelMiniatura3MouseExited
+    }//GEN-LAST:event_labelMiniatura0MouseExited
 
     private void labelMiniatura2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura2MouseEntered
-        ImageIcon currentIcon2 = (ImageIcon) labelMiniatura2.getIcon();
+        // Obtener la imagen actual del JLabel
+        ImageIcon currentIcon = (ImageIcon) labelMiniatura2.getIcon();
+        Image currentImage = currentIcon.getImage();
+
+        // Escalar la imagen cuando el ratón entra en el JLabel
+        Image scaledImage = currentImage.getScaledInstance(450, 350, Image.SCALE_SMOOTH);
+        ImageIcon scaledIcon = new ImageIcon(scaledImage);
+
+        // Establecer la imagen escalada en el JLabel
+        labelMiniatura2.setIcon(scaledIcon);
+    }//GEN-LAST:event_labelMiniatura2MouseEntered
+
+    private void labelMiniatura2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura2MouseExited
+        labelMiniatura2.setIcon(originalIcon); // Reemplaza 'iconOriginal' con tu ícono original
+    }//GEN-LAST:event_labelMiniatura2MouseExited
+
+    private void labelMiniatura1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MouseEntered
+        ImageIcon currentIcon2 = (ImageIcon) labelMiniatura1.getIcon();
         Image currentImage8 = currentIcon2.getImage();
         // Escalar la imagen cuando el ratón entra en el JLabel
         Image scaledImage2 = currentImage8.getScaledInstance(450, 350, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon2 = new ImageIcon(scaledImage2);
         // Establecer la imagen escalada en el JLabel
-        labelMiniatura2.setIcon(scaledIcon2);
-    }//GEN-LAST:event_labelMiniatura2MouseEntered
+        labelMiniatura1.setIcon(scaledIcon2);
+    }//GEN-LAST:event_labelMiniatura1MouseEntered
 
-    private void labelMiniatura2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura2MouseExited
-        labelMiniatura2.setIcon(originalIcon2); // Reemplaza 'iconOriginal' con tu ícono original
-    }//GEN-LAST:event_labelMiniatura2MouseExited
+    private void labelMiniatura1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MouseExited
+        labelMiniatura1.setIcon(originalIcon2); // Reemplaza 'iconOriginal' con tu ícono original
+    }//GEN-LAST:event_labelMiniatura1MouseExited
 
-    private void labelMiniatura4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura4MouseEntered
+    private void labelMiniatura3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura3MouseEntered
         // Obtener la imagen actual del JLabel
-        ImageIcon currentIcon4 = (ImageIcon) labelMiniatura4.getIcon();
+        ImageIcon currentIcon4 = (ImageIcon) labelMiniatura3.getIcon();
         Image currentImage4 = currentIcon4.getImage();
 
         // Escalar la imagen cuando el ratón entra en el JLabel
@@ -339,16 +338,16 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         ImageIcon scaledIcon4 = new ImageIcon(scaledImage4);
 
         // Establecer la imagen escalada en el JLabel
-        labelMiniatura4.setIcon(scaledIcon4);
-    }//GEN-LAST:event_labelMiniatura4MouseEntered
+        labelMiniatura3.setIcon(scaledIcon4);
+    }//GEN-LAST:event_labelMiniatura3MouseEntered
 
-    private void labelMiniatura4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura4MouseExited
-        labelMiniatura4.setIcon(originalIcon4); // Reemplaza 'iconOriginal' con tu ícono original
-    }//GEN-LAST:event_labelMiniatura4MouseExited
+    private void labelMiniatura3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura3MouseExited
+        labelMiniatura3.setIcon(originalIcon4); // Reemplaza 'iconOriginal' con tu ícono original
+    }//GEN-LAST:event_labelMiniatura3MouseExited
 
-    private void labelMiniatura5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura5MouseEntered
+    private void labelMiniatura4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura4MouseEntered
         // Obtener la imagen actual del JLabel
-        ImageIcon currentIcon5 = (ImageIcon) labelMiniatura5.getIcon();
+        ImageIcon currentIcon5 = (ImageIcon) labelMiniatura4.getIcon();
         Image currentImage = currentIcon5.getImage();
 
         // Escalar la imagen cuando el ratón entra en el JLabel
@@ -356,16 +355,16 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         ImageIcon scaledIcon5 = new ImageIcon(scaledImage5);
 
         // Establecer la imagen escalada en el JLabel
-        labelMiniatura5.setIcon(scaledIcon5);
-    }//GEN-LAST:event_labelMiniatura5MouseEntered
+        labelMiniatura4.setIcon(scaledIcon5);
+    }//GEN-LAST:event_labelMiniatura4MouseEntered
 
-    private void labelMiniatura5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura5MouseExited
-        labelMiniatura5.setIcon(originalIcon5); // Reemplaza 'iconOriginal' con tu ícono original
-    }//GEN-LAST:event_labelMiniatura5MouseExited
+    private void labelMiniatura4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura4MouseExited
+        labelMiniatura4.setIcon(originalIcon5); // Reemplaza 'iconOriginal' con tu ícono original
+    }//GEN-LAST:event_labelMiniatura4MouseExited
 
-    private void labelMiniatura6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura6MouseEntered
+    private void labelMiniatura5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura5MouseEntered
         // Obtener la imagen actual del JLabel
-        ImageIcon currentIcon6 = (ImageIcon) labelMiniatura6.getIcon();
+        ImageIcon currentIcon6 = (ImageIcon) labelMiniatura5.getIcon();
         Image currentImage6 = currentIcon6.getImage();
 
         // Escalar la imagen cuando el ratón entra en el JLabel
@@ -373,40 +372,40 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         ImageIcon scaledIcon6 = new ImageIcon(scaledImage6);
 
         // Establecer la imagen escalada en el JLabel
-        labelMiniatura6.setIcon(scaledIcon6);
-    }//GEN-LAST:event_labelMiniatura6MouseEntered
+        labelMiniatura5.setIcon(scaledIcon6);
+    }//GEN-LAST:event_labelMiniatura5MouseEntered
 
-    private void labelMiniatura6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura6MouseExited
-        labelMiniatura6.setIcon(originalIcon6); // Reemplaza 'iconOriginal' con tu ícono original
-    }//GEN-LAST:event_labelMiniatura6MouseExited
+    private void labelMiniatura5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura5MouseExited
+        labelMiniatura5.setIcon(originalIcon6); // Reemplaza 'iconOriginal' con tu ícono original
+    }//GEN-LAST:event_labelMiniatura5MouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGame;
     private javax.swing.JButton btnSalir;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel icon0;
+    private javax.swing.JLabel icon1;
+    private javax.swing.JLabel icon10;
+    private javax.swing.JLabel icon11;
+    private javax.swing.JLabel icon12;
+    private javax.swing.JLabel icon13;
+    private javax.swing.JLabel icon2;
+    private javax.swing.JLabel icon3;
+    private javax.swing.JLabel icon4;
+    private javax.swing.JLabel icon5;
+    private javax.swing.JLabel icon6;
+    private javax.swing.JLabel icon7;
+    private javax.swing.JLabel icon8;
+    private javax.swing.JLabel icon9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel labelFondoBase;
+    private javax.swing.JLabel labelMiniatura0;
     private javax.swing.JLabel labelMiniatura1;
     private javax.swing.JLabel labelMiniatura2;
     private javax.swing.JLabel labelMiniatura3;
     private javax.swing.JLabel labelMiniatura4;
     private javax.swing.JLabel labelMiniatura5;
-    private javax.swing.JLabel labelMiniatura6;
     // End of variables declaration//GEN-END:variables
 }

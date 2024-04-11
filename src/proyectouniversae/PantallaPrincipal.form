@@ -13,9 +13,6 @@
       <Dimension value="[1920, 1080]"/>
     </Property>
     <Property name="undecorated" type="boolean" value="true"/>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1920, 1080]"/>
-    </Property>
     <Property name="resizable" type="boolean" value="false"/>
     <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[1920, 1080]"/>
@@ -83,24 +80,24 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="labelMiniatura4" min="-2" pref="462" max="-2" attributes="0"/>
-                          <Component id="labelMiniatura1" min="-2" pref="462" max="-2" attributes="0"/>
+                          <Component id="labelMiniatura3" min="-2" pref="462" max="-2" attributes="0"/>
+                          <Component id="labelMiniatura0" min="-2" pref="462" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="labelMiniatura2" min="-2" pref="462" max="-2" attributes="0"/>
+                              <Component id="labelMiniatura1" min="-2" pref="462" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="labelMiniatura5" min="-2" pref="462" max="-2" attributes="0"/>
+                              <Component id="labelMiniatura4" min="-2" pref="462" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelMiniatura3" min="-2" pref="462" max="-2" attributes="0"/>
-                          <Component id="labelMiniatura6" min="-2" pref="462" max="-2" attributes="0"/>
+                          <Component id="labelMiniatura2" min="-2" pref="462" max="-2" attributes="0"/>
+                          <Component id="labelMiniatura5" min="-2" pref="462" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                   </Group>
@@ -111,15 +108,15 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="41" pref="41" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelMiniatura1" min="-2" pref="383" max="-2" attributes="0"/>
                           <Component id="labelMiniatura2" min="-2" pref="383" max="-2" attributes="0"/>
-                          <Component id="labelMiniatura3" min="-2" pref="383" max="-2" attributes="0"/>
-                          <Component id="labelMiniatura1" alignment="0" min="-2" pref="383" max="-2" attributes="0"/>
+                          <Component id="labelMiniatura0" alignment="0" min="-2" pref="383" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelMiniatura5" min="-2" pref="383" max="-2" attributes="0"/>
                           <Component id="labelMiniatura4" min="-2" pref="383" max="-2" attributes="0"/>
-                          <Component id="labelMiniatura6" min="-2" pref="383" max="-2" attributes="0"/>
+                          <Component id="labelMiniatura3" min="-2" pref="383" max="-2" attributes="0"/>
+                          <Component id="labelMiniatura5" min="-2" pref="383" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                   </Group>
@@ -127,12 +124,40 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="labelMiniatura1">
+            <Component class="javax.swing.JLabel" name="labelMiniatura0">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton0.png"/>
                 </Property>
+                <Property name="horizontalTextPosition" type="int" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labelMiniatura0MouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labelMiniatura0MouseExited"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelMiniatura2">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton2.png"/>
+                </Property>
+                <Property name="autoscrolls" type="boolean" value="true"/>
+                <Property name="horizontalTextPosition" type="int" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labelMiniatura2MouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labelMiniatura2MouseExited"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelMiniatura1">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton1.png"/>
+                </Property>
+                <Property name="autoscrolls" type="boolean" value="true"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
               <Events>
@@ -144,7 +169,7 @@
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton2.png"/>
+                  <Image iconType="3" name="/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton3.png"/>
                 </Property>
                 <Property name="autoscrolls" type="boolean" value="true"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -154,25 +179,11 @@
                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labelMiniatura3MouseExited"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelMiniatura2">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton1.png"/>
-                </Property>
-                <Property name="autoscrolls" type="boolean" value="true"/>
-                <Property name="horizontalTextPosition" type="int" value="0"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labelMiniatura2MouseEntered"/>
-                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labelMiniatura2MouseExited"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="labelMiniatura4">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton3.png"/>
+                  <Image iconType="3" name="/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton4.png"/>
                 </Property>
                 <Property name="autoscrolls" type="boolean" value="true"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -186,7 +197,7 @@
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton4.png"/>
+                  <Image iconType="3" name="/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton5.png"/>
                 </Property>
                 <Property name="autoscrolls" type="boolean" value="true"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -194,20 +205,6 @@
               <Events>
                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labelMiniatura5MouseEntered"/>
                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labelMiniatura5MouseExited"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelMiniatura6">
-              <Properties>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/proyectouniversae/InterfazHome/Miniaturas simuladores/HomeButton5.png"/>
-                </Property>
-                <Property name="autoscrolls" type="boolean" value="true"/>
-                <Property name="horizontalTextPosition" type="int" value="0"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labelMiniatura6MouseEntered"/>
-                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="labelMiniatura6MouseExited"/>
               </Events>
             </Component>
           </SubComponents>
@@ -224,98 +221,98 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="icon0">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazBase/Escudos/LauncherButton8.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="icon1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazBase/Escudos/LauncherButton0.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel3">
+            <Component class="javax.swing.JLabel" name="icon2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazBase/Escudos/LauncherButton1.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="icon3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazBase/Escudos/LauncherButton2.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel5">
+            <Component class="javax.swing.JLabel" name="icon4">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazBase/Escudos/LauncherButton3.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel6">
+            <Component class="javax.swing.JLabel" name="icon5">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazBase/Escudos/LauncherButton4.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel7">
+            <Component class="javax.swing.JLabel" name="icon6">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazBase/Escudos/LauncherButton5.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel8">
+            <Component class="javax.swing.JLabel" name="icon7">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazBase/Escudos/LauncherButton6.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel9">
+            <Component class="javax.swing.JLabel" name="icon8">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazBase/Escudos/LauncherButton7.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel10">
+            <Component class="javax.swing.JLabel" name="icon9">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazBase/Escudos/LauncherButton13.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel11">
+            <Component class="javax.swing.JLabel" name="icon10">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazBase/Escudos/LauncherButton9.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel12">
+            <Component class="javax.swing.JLabel" name="icon11">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazBase/Escudos/LauncherButton10.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel13">
+            <Component class="javax.swing.JLabel" name="icon12">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazBase/Escudos/LauncherButton11.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel14">
+            <Component class="javax.swing.JLabel" name="icon13">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/proyectouniversae/InterfazBase/Escudos/LauncherButton12.png"/>
