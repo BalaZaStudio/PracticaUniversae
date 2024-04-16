@@ -1,11 +1,10 @@
 package proyectouniversae;
 
-import java.awt.Image;
-
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import static proyectouniversae.Controladora.escalarImagen;
 
 /**
  *
@@ -13,15 +12,15 @@ import javax.swing.JLabel;
  */
 public class PantallaGame extends javax.swing.JFrame {
 
-    private int imagenActualIndex = 0; // Variable Imagen Actual
-    public final List<ImageIcon> imagenes = new ArrayList<>();
-    public final List<ImageIcon> imagenes1 = new ArrayList<>();
-    public final List<ImageIcon> imagenes2 = new ArrayList<>();
-    public final List<ImageIcon> imagenes3 = new ArrayList<>();
-    public final List<ImageIcon> imagenes4 = new ArrayList<>();
-    public final List<ImageIcon> imagenes5 = new ArrayList<>();
+    public static int imagenActualIndex = 0; // Variable Imagen Actual
+    public static final List<ImageIcon> imagenes = new ArrayList<>();
+    public static final List<ImageIcon> imagenes1 = new ArrayList<>();
+    public static final List<ImageIcon> imagenes2 = new ArrayList<>();
+    public static final List<ImageIcon> imagenes3 = new ArrayList<>();
+    public static final List<ImageIcon> imagenes4 = new ArrayList<>();
+    public static final List<ImageIcon> imagenes5 = new ArrayList<>();
 
-    private List<ImageIcon> listaImagenesCargadas; // Nueva variable para mantener la lista de imágenes actualmente cargada
+    public static List<ImageIcon> listaImagenesCargadas; // Nueva variable para mantener la lista de imágenes actualmente cargada
     private final ImageIcon[] originalLogo = new ImageIcon[14];
 
     public PantallaGame() {
@@ -393,23 +392,29 @@ public class PantallaGame extends javax.swing.JFrame {
 
     private void jLabelBtnIzqMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBtnIzqMouseClicked
 
+        // Si hay imágenes cargadas previamente y no estamos en la primera imagen, retroceder una imagen.
         if (imagenActualIndex > 0) {
-            imagenActualIndex--;
+            imagenActualIndex--; // Disminuye el índice de la imagen actual.
         } else {
+            // Si estamos en la primera imagen, establece el índice al de la última imagen.
             imagenActualIndex = listaImagenesCargadas.size() - 1;
         }
-        mostrarImagenActualEnPanel(listaImagenesCargadas);
+        // Muestra la imagen actual en el panel.
+        Controladora.mostrarImagenActualEnPanel(listaImagenesCargadas);
 
     }//GEN-LAST:event_jLabelBtnIzqMouseClicked
 
     private void jLabelBtnDerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBtnDerMouseClicked
 
+        // Si hay imágenes cargadas previamente y no estamos en la última imagen, avanzar una imagen.
         if (imagenActualIndex < listaImagenesCargadas.size() - 1) {
-            imagenActualIndex++;
+            imagenActualIndex++; // Incrementa el índice de la imagen actual.
         } else {
+            // Si estamos en la última imagen, establece el índice al de la primera imagen.
             imagenActualIndex = 0;
         }
-        mostrarImagenActualEnPanel(listaImagenesCargadas);
+        // Muestra la imagen actual en el panel.
+        Controladora.mostrarImagenActualEnPanel(listaImagenesCargadas);
 
     }//GEN-LAST:event_jLabelBtnDerMouseClicked
 
@@ -418,16 +423,8 @@ public class PantallaGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelLogoUniversaeMouseClicked
 
     private void jLabelIcon0MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon0MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon0.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo0 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled0 = new ImageIcon(scaledLogo0);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon0.setIcon(scaled0);
+        // Llamada al método para escalar la imagen del jLabelIcon13 a 120x120
+        escalarImagen(jLabelIcon0, 120, 120);
     }//GEN-LAST:event_jLabelIcon0MouseEntered
 
     private void jLabelIcon0MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon0MouseExited
@@ -435,16 +432,7 @@ public class PantallaGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon0MouseExited
 
     private void jLabelIcon1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon1MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon1.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo1 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled1 = new ImageIcon(scaledLogo1);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon1.setIcon(scaled1);
+        escalarImagen(jLabelIcon1, 120, 120);
     }//GEN-LAST:event_jLabelIcon1MouseEntered
 
     private void jLabelIcon1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon1MouseExited
@@ -452,16 +440,7 @@ public class PantallaGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon1MouseExited
 
     private void jLabelIcon2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon2MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon2.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo2 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled2 = new ImageIcon(scaledLogo2);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon2.setIcon(scaled2);
+        escalarImagen(jLabelIcon2, 120, 120);
     }//GEN-LAST:event_jLabelIcon2MouseEntered
 
     private void jLabelIcon2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon2MouseExited
@@ -469,16 +448,7 @@ public class PantallaGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon2MouseExited
 
     private void jLabelIcon3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon3MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon3.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo3 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled3 = new ImageIcon(scaledLogo3);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon3.setIcon(scaled3);
+        escalarImagen(jLabelIcon3, 120, 120);
     }//GEN-LAST:event_jLabelIcon3MouseEntered
 
     private void jLabelIcon3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon3MouseExited
@@ -486,16 +456,7 @@ public class PantallaGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon3MouseExited
 
     private void jLabelIcon4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon4MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon4.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo4 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled4 = new ImageIcon(scaledLogo4);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon4.setIcon(scaled4);
+        escalarImagen(jLabelIcon4, 120, 120);
     }//GEN-LAST:event_jLabelIcon4MouseEntered
 
     private void jLabelIcon4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon4MouseExited
@@ -503,16 +464,7 @@ public class PantallaGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon4MouseExited
 
     private void jLabelIcon5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon5MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon5.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo5 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled5 = new ImageIcon(scaledLogo5);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon5.setIcon(scaled5);
+        escalarImagen(jLabelIcon5, 120, 120);
     }//GEN-LAST:event_jLabelIcon5MouseEntered
 
     private void jLabelIcon5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon5MouseExited
@@ -520,16 +472,7 @@ public class PantallaGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon5MouseExited
 
     private void jLabelIcon6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon6MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon6.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo6 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled6 = new ImageIcon(scaledLogo6);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon6.setIcon(scaled6);
+        escalarImagen(jLabelIcon6, 120, 120);
     }//GEN-LAST:event_jLabelIcon6MouseEntered
 
     private void jLabelIcon6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon6MouseExited
@@ -537,16 +480,7 @@ public class PantallaGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon6MouseExited
 
     private void jLabelIcon7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon7MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon7.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo7 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled7 = new ImageIcon(scaledLogo7);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon7.setIcon(scaled7);
+        escalarImagen(jLabelIcon7, 120, 120);
     }//GEN-LAST:event_jLabelIcon7MouseEntered
 
     private void jLabelIcon7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon7MouseExited
@@ -554,16 +488,7 @@ public class PantallaGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon7MouseExited
 
     private void jLabelIcon8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon8MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon8.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo8 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled8 = new ImageIcon(scaledLogo8);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon8.setIcon(scaled8);
+        escalarImagen(jLabelIcon8, 120, 120);
     }//GEN-LAST:event_jLabelIcon8MouseEntered
 
     private void jLabelIcon8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon8MouseExited
@@ -571,16 +496,7 @@ public class PantallaGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon8MouseExited
 
     private void jLabelIcon9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon9MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon9.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo9 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled9 = new ImageIcon(scaledLogo9);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon9.setIcon(scaled9);
+        escalarImagen(jLabelIcon9, 120, 120);
     }//GEN-LAST:event_jLabelIcon9MouseEntered
 
     private void jLabelIcon9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon9MouseExited
@@ -588,16 +504,7 @@ public class PantallaGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon9MouseExited
 
     private void jLabelIcon10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon10MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon10.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo10 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled10 = new ImageIcon(scaledLogo10);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon10.setIcon(scaled10);
+        escalarImagen(jLabelIcon10, 120, 120);
     }//GEN-LAST:event_jLabelIcon10MouseEntered
 
     private void jLabelIcon10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon10MouseExited
@@ -605,16 +512,7 @@ public class PantallaGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon10MouseExited
 
     private void jLabelIcon11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon11MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon11.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo11 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled11 = new ImageIcon(scaledLogo11);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon11.setIcon(scaled11);
+        escalarImagen(jLabelIcon11, 120, 120);
     }//GEN-LAST:event_jLabelIcon11MouseEntered
 
     private void jLabelIcon11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon11MouseExited
@@ -622,16 +520,7 @@ public class PantallaGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon11MouseExited
 
     private void jLabelIcon12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon12MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon12.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo12 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled12 = new ImageIcon(scaledLogo12);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon12.setIcon(scaled12);
+        escalarImagen(jLabelIcon12, 120, 120);
     }//GEN-LAST:event_jLabelIcon12MouseEntered
 
     private void jLabelIcon12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon12MouseExited
@@ -639,132 +528,26 @@ public class PantallaGame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon12MouseExited
 
     private void jLabelIcon13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon13MouseEntered
-        // TODO add your handling code  // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon13.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo13 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled13 = new ImageIcon(scaledLogo13);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon13.setIcon(scaled13);
+        escalarImagen(jLabelIcon13, 120, 120);
     }//GEN-LAST:event_jLabelIcon13MouseEntered
 
     private void jLabelIcon13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon13MouseExited
         jLabelIcon13.setIcon(originalLogo[13]);
     }//GEN-LAST:event_jLabelIcon13MouseExited
-    private void cargarImagenes(List<ImageIcon> listaImagenes, String carpeta, String[] nombresArchivos) {
-        for (String nombreArchivo : nombresArchivos) {
-            ImageIcon imagen = new ImageIcon("C:/Users/zabal/Documents/GitHub/PracticaUniversae/src/proyectouniversae/InterfazGame/Miniaturas/" + carpeta + "/" + nombreArchivo);
-            listaImagenes.add(imagen);
+    public static void actualizarCirculos(int indiceImagen) {
+        JLabel[] jLabelCircles = {jLabelCircle1, jLabelCircle2, jLabelCircle3, jLabelCircle4, jLabelCircle5};
+        JLabel[] jLabelCircleFills = {jLabelCircleFill1, jLabelCircleFill2, jLabelCircleFill3, jLabelCircleFill4, jLabelCircleFill5};
+
+        // Ocultar todos los JLabel
+        for (JLabel label : jLabelCircles) {
+            label.setVisible(true);
         }
-    }
-
-    public void inicializarCargaImagenes(List<ImageIcon> listaImagenes) {
-        String[] nombresHelicoptero = {"Helicoptero0.png", "Helicoptero1.png", "Helicoptero2.png", "Helicoptero3.png", "Helicoptero4.png"};
-        String[] nombresHemorragia = {"Hemorragia0.png", "Hemorragia1.png", "Hemorragia2.png", "Hemorragia3.png", "Hemorragia4.png"};
-        String[] nombresExtincion = {"Extincion0.png", "Extincion1.png", "Extincion2.png", "Extincion3.png", "Extincion4.png"};
-        String[] nombresEPIS = {"EPIS0.png", "EPIS1.png", "EPIS2.png", "EPIS3.png", "EPIS4.png"};
-        String[] nombresHelicoptero1 = {"Helicoptero0.png", "Helicoptero1.png", "Helicoptero2.png", "Helicoptero3.png", "Helicoptero4.png"};
-        String[] nombresAscensor = {"Ascensor0.png", "Ascensor1.png", "Ascensor2.png", "Ascensor3.png", "Ascensor4.png"};
-
-        cargarImagenes(imagenes, "Helicoptero", nombresHelicoptero);
-        cargarImagenes(imagenes1, "Hemorragia", nombresHemorragia);
-        cargarImagenes(imagenes2, "Extincion", nombresExtincion);
-        cargarImagenes(imagenes3, "EPIS", nombresEPIS);
-        cargarImagenes(imagenes4, "Helicoptero", nombresHelicoptero1);
-        cargarImagenes(imagenes5, "Ascensor", nombresAscensor);
-
-        listaImagenesCargadas = !listaImagenes.isEmpty() ? listaImagenes : new ArrayList<>();
-    }
-
-    public void mostrarPrimeraImagenEnPanel() {
-        if (!listaImagenesCargadas.isEmpty()) {
-            mostrarImagenActualEnPanel(listaImagenesCargadas);
+        for (JLabel label : jLabelCircleFills) {
+            label.setVisible(false);
         }
-    }
 
-    private void mostrarImagenActualEnPanel(List<ImageIcon> listaImagenes) {
-        if (!listaImagenes.isEmpty()) {
-            ImageIcon imagenOriginal = listaImagenes.get(imagenActualIndex);
-
-            // Especificar el tamaño deseado para la imagen
-            int anchoDeseado = 700;
-            int altoDeseado = 550;
-
-            // Redimensionar la imagen al tamaño deseado
-            Image imagenRedimensionada = imagenOriginal.getImage().getScaledInstance(anchoDeseado, altoDeseado, Image.SCALE_SMOOTH);
-
-            // Crear un nuevo ImageIcon con la imagen redimensionada
-            ImageIcon imagenEscalada = new ImageIcon(imagenRedimensionada);
-
-            // Mostrar la imagen redimensionada en el JLabel
-            jLabelContent.setIcon(imagenEscalada);
-            actualizarCirculos(imagenActualIndex);
-            pack();
-        }
-    }
-
-    private void actualizarCirculos(int indiceImagen) {
-        // Primero, ocultar todos los jLabelCircle y jLabelCircleFill
-        jLabelCircle1.setVisible(false);
-        jLabelCircleFill1.setVisible(false);
-        jLabelCircle2.setVisible(false);
-        jLabelCircleFill2.setVisible(false);
-        jLabelCircle3.setVisible(false);
-        jLabelCircleFill3.setVisible(false);
-        jLabelCircle4.setVisible(false);
-        jLabelCircleFill4.setVisible(false);
-        jLabelCircle5.setVisible(false);
-        jLabelCircleFill5.setVisible(false);
-
-        // Activar el jLabelCircleFill correspondiente y desactivar el jLabelCircle
-        switch (indiceImagen) {
-            case 0:
-                jLabelCircleFill1.setVisible(true);
-                jLabelCircle1.setVisible(true);
-                jLabelCircle2.setVisible(true);
-                jLabelCircle3.setVisible(true);
-                jLabelCircle4.setVisible(true);
-                jLabelCircle5.setVisible(true);
-                break;
-            case 1:
-                jLabelCircleFill2.setVisible(true);
-                jLabelCircle1.setVisible(true);
-                jLabelCircle2.setVisible(true);
-                jLabelCircle3.setVisible(true);
-                jLabelCircle4.setVisible(true);
-                jLabelCircle5.setVisible(true);
-                break;
-            case 2:
-                jLabelCircleFill3.setVisible(true);
-                jLabelCircle1.setVisible(true);
-                jLabelCircle2.setVisible(true);
-                jLabelCircle3.setVisible(true);
-                jLabelCircle4.setVisible(true);
-                jLabelCircle5.setVisible(true);
-                break;
-            case 3:
-                jLabelCircleFill4.setVisible(true);
-                jLabelCircle1.setVisible(true);
-                jLabelCircle2.setVisible(true);
-                jLabelCircle3.setVisible(true);
-                jLabelCircle4.setVisible(true);
-                jLabelCircle5.setVisible(true);
-                break;
-            case 4:
-                jLabelCircleFill5.setVisible(true);
-                jLabelCircle1.setVisible(true);
-                jLabelCircle2.setVisible(true);
-                jLabelCircle3.setVisible(true);
-                jLabelCircle4.setVisible(true);
-                jLabelCircle5.setVisible(true);
-                break;
-            default:
-                // Opcional: manejar cualquier caso no previsto
-                break;
-        }
+        // Mostrar el JLabel fill correspondiente al índice de la imagen seleccionada
+        jLabelCircleFills[indiceImagen].setVisible(true);
     }
 
 
@@ -772,34 +555,34 @@ public class PantallaGame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabelBtnDer;
     private javax.swing.JLabel jLabelBtnIzq;
-    private javax.swing.JLabel jLabelCircle1;
-    private javax.swing.JLabel jLabelCircle2;
-    private javax.swing.JLabel jLabelCircle3;
-    private javax.swing.JLabel jLabelCircle4;
-    private javax.swing.JLabel jLabelCircle5;
-    private javax.swing.JLabel jLabelCircleFill1;
-    private javax.swing.JLabel jLabelCircleFill2;
-    private javax.swing.JLabel jLabelCircleFill3;
-    private javax.swing.JLabel jLabelCircleFill4;
-    private javax.swing.JLabel jLabelCircleFill5;
+    public static javax.swing.JLabel jLabelCircle1;
+    public static javax.swing.JLabel jLabelCircle2;
+    public static javax.swing.JLabel jLabelCircle3;
+    public static javax.swing.JLabel jLabelCircle4;
+    public static javax.swing.JLabel jLabelCircle5;
+    public static javax.swing.JLabel jLabelCircleFill1;
+    public static javax.swing.JLabel jLabelCircleFill2;
+    public static javax.swing.JLabel jLabelCircleFill3;
+    public static javax.swing.JLabel jLabelCircleFill4;
+    public static javax.swing.JLabel jLabelCircleFill5;
     private javax.swing.JLabel jLabelComenzar;
-    private javax.swing.JLabel jLabelContent;
-    private javax.swing.JLabel jLabelIcon0;
-    private javax.swing.JLabel jLabelIcon1;
-    private javax.swing.JLabel jLabelIcon10;
-    private javax.swing.JLabel jLabelIcon11;
-    private javax.swing.JLabel jLabelIcon12;
+    public static javax.swing.JLabel jLabelContent;
+    public static javax.swing.JLabel jLabelIcon0;
+    public static javax.swing.JLabel jLabelIcon1;
+    public static javax.swing.JLabel jLabelIcon10;
+    public static javax.swing.JLabel jLabelIcon11;
+    public static javax.swing.JLabel jLabelIcon12;
     private javax.swing.JLabel jLabelIcon13;
-    private javax.swing.JLabel jLabelIcon2;
-    private javax.swing.JLabel jLabelIcon3;
-    private javax.swing.JLabel jLabelIcon4;
-    private javax.swing.JLabel jLabelIcon5;
-    private javax.swing.JLabel jLabelIcon6;
-    private javax.swing.JLabel jLabelIcon7;
-    private javax.swing.JLabel jLabelIcon8;
-    private javax.swing.JLabel jLabelIcon9;
+    public static javax.swing.JLabel jLabelIcon2;
+    public static javax.swing.JLabel jLabelIcon3;
+    public static javax.swing.JLabel jLabelIcon4;
+    public static javax.swing.JLabel jLabelIcon5;
+    public static javax.swing.JLabel jLabelIcon6;
+    public static javax.swing.JLabel jLabelIcon7;
+    public static javax.swing.JLabel jLabelIcon8;
+    public static javax.swing.JLabel jLabelIcon9;
     private javax.swing.JLabel jLabelLogoUniversae;
-    private javax.swing.JPanel jPanel2;
+    public static javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelBaseFondo;
     private javax.swing.JPanel jPanelContent;
     private javax.swing.JLabel labelFondoBase;

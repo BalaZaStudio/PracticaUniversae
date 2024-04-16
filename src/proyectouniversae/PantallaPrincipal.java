@@ -1,14 +1,18 @@
 package proyectouniversae;
 
-import java.awt.Image;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javazoom.jl.decoder.JavaLayerException;
-import javazoom.jl.player.Player;
+import static proyectouniversae.Controladora.escalarImagen;
+import static proyectouniversae.Controladora.reproducirSonidoYMostrarImagenes;
+import static proyectouniversae.PantallaGame.imagenes;
+import static proyectouniversae.PantallaGame.imagenes1;
+import static proyectouniversae.PantallaGame.imagenes2;
+import static proyectouniversae.PantallaGame.imagenes3;
+import static proyectouniversae.PantallaGame.imagenes4;
+import static proyectouniversae.PantallaGame.imagenes5;
 
 /**
  *
@@ -18,7 +22,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
     private final ImageIcon[] originalIcon = new ImageIcon[6];
     private final ImageIcon[] originalLogo = new ImageIcon[14];
-    PantallaGame pantalla = new PantallaGame();
 
     public PantallaPrincipal() {
         initComponents();
@@ -456,15 +459,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void labelMiniatura1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon currentIcon = (ImageIcon) labelMiniatura1.getIcon();
-        Image currentImage = currentIcon.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledImage = currentImage.getScaledInstance(450, 350, Image.SCALE_SMOOTH);
-
-        ImageIcon scaledIcon = new ImageIcon(scaledImage);
-        labelMiniatura1.setIcon(scaledIcon);
+        escalarImagen(labelMiniatura1, 450, 350);
 
     }//GEN-LAST:event_labelMiniatura1MouseEntered
 
@@ -474,16 +469,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_labelMiniatura1MouseExited
 
     private void labelMiniatura3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura3MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon currentIcon = (ImageIcon) labelMiniatura3.getIcon();
-        Image currentImage = currentIcon.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledImage = currentImage.getScaledInstance(450, 350, Image.SCALE_SMOOTH);
-        ImageIcon scaledIcon = new ImageIcon(scaledImage);
-
-        // Establecer la imagen escalada en el JLabel
-        labelMiniatura3.setIcon(scaledIcon);
+        escalarImagen(labelMiniatura3, 450, 350);
     }//GEN-LAST:event_labelMiniatura3MouseEntered
 
     private void labelMiniatura3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura3MouseExited
@@ -491,13 +477,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_labelMiniatura3MouseExited
 
     private void labelMiniatura2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura2MouseEntered
-        ImageIcon currentIcon2 = (ImageIcon) labelMiniatura2.getIcon();
-        Image currentImage8 = currentIcon2.getImage();
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledImage2 = currentImage8.getScaledInstance(450, 350, Image.SCALE_SMOOTH);
-        ImageIcon scaledIcon2 = new ImageIcon(scaledImage2);
-        // Establecer la imagen escalada en el JLabel
-        labelMiniatura2.setIcon(scaledIcon2);
+        escalarImagen(labelMiniatura2, 450, 350);
     }//GEN-LAST:event_labelMiniatura2MouseEntered
 
     private void labelMiniatura2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura2MouseExited
@@ -505,16 +485,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_labelMiniatura2MouseExited
 
     private void labelMiniatura4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura4MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon currentIcon4 = (ImageIcon) labelMiniatura4.getIcon();
-        Image currentImage4 = currentIcon4.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledImage4 = currentImage4.getScaledInstance(450, 350, Image.SCALE_SMOOTH);
-        ImageIcon scaledIcon4 = new ImageIcon(scaledImage4);
-
-        // Establecer la imagen escalada en el JLabel
-        labelMiniatura4.setIcon(scaledIcon4);
+        escalarImagen(labelMiniatura4, 450, 350);
     }//GEN-LAST:event_labelMiniatura4MouseEntered
 
     private void labelMiniatura4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura4MouseExited
@@ -522,16 +493,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_labelMiniatura4MouseExited
 
     private void labelMiniatura5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura5MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon currentIcon5 = (ImageIcon) labelMiniatura5.getIcon();
-        Image currentImage = currentIcon5.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledImage5 = currentImage.getScaledInstance(450, 350, Image.SCALE_SMOOTH);
-        ImageIcon scaledIcon5 = new ImageIcon(scaledImage5);
-
-        // Establecer la imagen escalada en el JLabel
-        labelMiniatura5.setIcon(scaledIcon5);
+        escalarImagen(labelMiniatura5, 450, 350);
     }//GEN-LAST:event_labelMiniatura5MouseEntered
 
     private void labelMiniatura5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura5MouseExited
@@ -539,16 +501,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_labelMiniatura5MouseExited
 
     private void labelMiniatura6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura6MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon currentIcon6 = (ImageIcon) labelMiniatura6.getIcon();
-        Image currentImage6 = currentIcon6.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledImage6 = currentImage6.getScaledInstance(450, 350, Image.SCALE_SMOOTH);
-        ImageIcon scaledIcon6 = new ImageIcon(scaledImage6);
-
-        // Establecer la imagen escalada en el JLabel
-        labelMiniatura6.setIcon(scaledIcon6);
+        escalarImagen(labelMiniatura6, 450, 350);
     }//GEN-LAST:event_labelMiniatura6MouseEntered
 
     private void labelMiniatura6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura6MouseExited
@@ -557,14 +510,10 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
     private void labelMiniatura1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MouseClicked
         try {
-            reproducirSonido("C:\\Users\\zabal\\Documents\\GitHub\\PracticaUniversae\\src\\proyectouniversae\\Sounds\\Click.mp3");
+            reproducirSonidoYMostrarImagenes(imagenes);
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        pantalla.setVisible(true);
-        pantalla.inicializarCargaImagenes(pantalla.imagenes);
-        pantalla.mostrarPrimeraImagenEnPanel();
 
 
     }//GEN-LAST:event_labelMiniatura1MouseClicked
@@ -582,16 +531,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon13MouseExited
 
     private void jLabelIcon13MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon13MouseEntered
-        // TODO add your handling code  // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon13.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo13 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled13 = new ImageIcon(scaledLogo13);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon13.setIcon(scaled13);
+        escalarImagen(jLabelIcon13, 120, 120);
     }//GEN-LAST:event_jLabelIcon13MouseEntered
 
     private void jLabelIcon12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon12MouseExited
@@ -599,16 +539,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon12MouseExited
 
     private void jLabelIcon12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon12MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon12.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo12 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled12 = new ImageIcon(scaledLogo12);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon12.setIcon(scaled12);
+        escalarImagen(jLabelIcon12, 120, 120);
     }//GEN-LAST:event_jLabelIcon12MouseEntered
 
     private void jLabelIcon11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon11MouseExited
@@ -616,16 +547,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon11MouseExited
 
     private void jLabelIcon11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon11MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon11.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo11 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled11 = new ImageIcon(scaledLogo11);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon11.setIcon(scaled11);
+        escalarImagen(jLabelIcon11, 120, 120);
     }//GEN-LAST:event_jLabelIcon11MouseEntered
 
     private void jLabelIcon10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon10MouseExited
@@ -633,16 +555,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon10MouseExited
 
     private void jLabelIcon10MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon10MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon10.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo10 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled10 = new ImageIcon(scaledLogo10);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon10.setIcon(scaled10);
+        escalarImagen(jLabelIcon10, 120, 120);
     }//GEN-LAST:event_jLabelIcon10MouseEntered
 
     private void jLabelIcon9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon9MouseExited
@@ -650,16 +563,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon9MouseExited
 
     private void jLabelIcon9MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon9MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon9.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo9 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled9 = new ImageIcon(scaledLogo9);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon9.setIcon(scaled9);
+        escalarImagen(jLabelIcon9, 120, 120);
     }//GEN-LAST:event_jLabelIcon9MouseEntered
 
     private void jLabelIcon8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon8MouseExited
@@ -667,16 +571,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon8MouseExited
 
     private void jLabelIcon8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon8MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon8.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo8 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled8 = new ImageIcon(scaledLogo8);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon8.setIcon(scaled8);
+        escalarImagen(jLabelIcon8, 120, 120);
     }//GEN-LAST:event_jLabelIcon8MouseEntered
 
     private void jLabelIcon7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon7MouseExited
@@ -684,16 +579,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon7MouseExited
 
     private void jLabelIcon7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon7MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon7.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo7 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled7 = new ImageIcon(scaledLogo7);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon7.setIcon(scaled7);
+        escalarImagen(jLabelIcon7, 120, 120);
     }//GEN-LAST:event_jLabelIcon7MouseEntered
 
     private void jLabelIcon6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon6MouseExited
@@ -701,16 +587,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon6MouseExited
 
     private void jLabelIcon6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon6MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon6.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo6 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled6 = new ImageIcon(scaledLogo6);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon6.setIcon(scaled6);
+        escalarImagen(jLabelIcon6, 120, 120);
     }//GEN-LAST:event_jLabelIcon6MouseEntered
 
     private void jLabelIcon5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon5MouseExited
@@ -718,16 +595,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon5MouseExited
 
     private void jLabelIcon5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon5MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon5.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo5 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled5 = new ImageIcon(scaledLogo5);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon5.setIcon(scaled5);
+        escalarImagen(jLabelIcon5, 120, 120);
     }//GEN-LAST:event_jLabelIcon5MouseEntered
 
     private void jLabelIcon4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon4MouseExited
@@ -735,16 +603,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon4MouseExited
 
     private void jLabelIcon4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon4MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon4.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo4 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled4 = new ImageIcon(scaledLogo4);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon4.setIcon(scaled4);
+        escalarImagen(jLabelIcon4, 120, 120);
     }//GEN-LAST:event_jLabelIcon4MouseEntered
 
     private void jLabelIcon3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon3MouseExited
@@ -752,16 +611,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon3MouseExited
 
     private void jLabelIcon3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon3MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon3.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo3 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled3 = new ImageIcon(scaledLogo3);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon3.setIcon(scaled3);
+        escalarImagen(jLabelIcon3, 120, 120);
     }//GEN-LAST:event_jLabelIcon3MouseEntered
 
     private void jLabelIcon2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon2MouseExited
@@ -769,16 +619,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon2MouseExited
 
     private void jLabelIcon2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon2MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon2.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo2 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled2 = new ImageIcon(scaledLogo2);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon2.setIcon(scaled2);
+        escalarImagen(jLabelIcon2, 120, 120);
     }//GEN-LAST:event_jLabelIcon2MouseEntered
 
     private void jLabelIcon1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon1MouseExited
@@ -786,16 +627,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon1MouseExited
 
     private void jLabelIcon1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon1MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon1.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo1 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled1 = new ImageIcon(scaledLogo1);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon1.setIcon(scaled1);
+        escalarImagen(jLabelIcon1, 120, 120);
     }//GEN-LAST:event_jLabelIcon1MouseEntered
 
     private void jLabelIcon0MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon0MouseExited
@@ -803,94 +635,49 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon0MouseExited
 
     private void jLabelIcon0MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon0MouseEntered
-        // Obtener la imagen actual del JLabel
-        ImageIcon jLabelIconCurrent = (ImageIcon) jLabelIcon0.getIcon();
-        Image currentLogo = jLabelIconCurrent.getImage();
-
-        // Escalar la imagen cuando el ratón entra en el JLabel
-        Image scaledLogo0 = currentLogo.getScaledInstance(120, 120, Image.SCALE_SMOOTH);
-        ImageIcon scaled0 = new ImageIcon(scaledLogo0);
-
-        // Establecer la imagen escalada en el JLabel
-        jLabelIcon0.setIcon(scaled0);
+        escalarImagen(jLabelIcon0, 120, 120);
     }//GEN-LAST:event_jLabelIcon0MouseEntered
 
     private void labelMiniatura2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura2MouseClicked
-
         try {
-            reproducirSonido("C:\\Users\\zabal\\Documents\\GitHub\\PracticaUniversae\\src\\proyectouniversae\\Sounds\\Click.mp3");
+            reproducirSonidoYMostrarImagenes(imagenes1);
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        pantalla.setVisible(true);
-        pantalla.inicializarCargaImagenes(pantalla.imagenes1);
-        pantalla.mostrarPrimeraImagenEnPanel();
 
     }//GEN-LAST:event_labelMiniatura2MouseClicked
 
     private void labelMiniatura3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura3MouseClicked
         try {
-            reproducirSonido("C:\\Users\\zabal\\Documents\\GitHub\\PracticaUniversae\\src\\proyectouniversae\\Sounds\\Click.mp3");
+            reproducirSonidoYMostrarImagenes(imagenes2);
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        pantalla.setVisible(true);
-        pantalla.inicializarCargaImagenes(pantalla.imagenes2);
-        pantalla.mostrarPrimeraImagenEnPanel();
     }//GEN-LAST:event_labelMiniatura3MouseClicked
 
     private void labelMiniatura4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura4MouseClicked
         try {
-            reproducirSonido("C:\\Users\\zabal\\Documents\\GitHub\\PracticaUniversae\\src\\proyectouniversae\\Sounds\\Click.mp3");
+            reproducirSonidoYMostrarImagenes(imagenes3);
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        pantalla.setVisible(true);
-        pantalla.inicializarCargaImagenes(pantalla.imagenes3);
-        pantalla.mostrarPrimeraImagenEnPanel();
     }//GEN-LAST:event_labelMiniatura4MouseClicked
 
     private void labelMiniatura5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura5MouseClicked
         try {
-            reproducirSonido("C:\\Users\\zabal\\Documents\\GitHub\\PracticaUniversae\\src\\proyectouniversae\\Sounds\\Click.mp3");
+            reproducirSonidoYMostrarImagenes(imagenes4);
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        pantalla.setVisible(true);
-        pantalla.inicializarCargaImagenes(pantalla.imagenes4);
-        pantalla.mostrarPrimeraImagenEnPanel();
     }//GEN-LAST:event_labelMiniatura5MouseClicked
 
     private void labelMiniatura6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura6MouseClicked
         try {
-            reproducirSonido("C:\\Users\\zabal\\Documents\\GitHub\\PracticaUniversae\\src\\proyectouniversae\\Sounds\\Click.mp3");
+            reproducirSonidoYMostrarImagenes(imagenes5);
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        pantalla.setVisible(true);
-        pantalla.inicializarCargaImagenes(pantalla.imagenes5);
-        pantalla.mostrarPrimeraImagenEnPanel();
     }//GEN-LAST:event_labelMiniatura6MouseClicked
-    public static void reproducirSonido(String rutaArchivo) throws JavaLayerException {
-        try {
-            // Crea un flujo de entrada para el archivo MP3
-            FileInputStream entradaMp3 = new FileInputStream(rutaArchivo);
-
-            // Crea un objeto Player para reproducir el archivo MP3
-            Player player = new Player(entradaMp3);
-
-            // Reproduce el sonido
-            player.play();
-        } catch (FileNotFoundException e) {
-            // Manejo de excepciones
-            System.err.println("Archivo no encontrado: " + e.getMessage());
-        }
-    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
