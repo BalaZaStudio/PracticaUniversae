@@ -9,8 +9,17 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
-import static proyectouniversae.PantallaGame.actualizarCirculos;
 import static proyectouniversae.PantallaGame.imagenActualIndex;
+import static proyectouniversae.PantallaGame.jLabelCircle1;
+import static proyectouniversae.PantallaGame.jLabelCircle2;
+import static proyectouniversae.PantallaGame.jLabelCircle3;
+import static proyectouniversae.PantallaGame.jLabelCircle4;
+import static proyectouniversae.PantallaGame.jLabelCircle5;
+import static proyectouniversae.PantallaGame.jLabelCircleFill1;
+import static proyectouniversae.PantallaGame.jLabelCircleFill2;
+import static proyectouniversae.PantallaGame.jLabelCircleFill3;
+import static proyectouniversae.PantallaGame.jLabelCircleFill4;
+import static proyectouniversae.PantallaGame.jLabelCircleFill5;
 import static proyectouniversae.PantallaGame.listaImagenesCargadas;
 
 /**
@@ -109,4 +118,58 @@ public class Controladora {
             System.err.println("Archivo no encontrado: " + e.getMessage());
         }
     }
+
+    public static void updateTextTitulo(String eventId) {
+        JsonManager jsonManager = JsonManager.getInstance("C:\\Users\\zabal\\Documents\\GitHub\\PracticaUniversae\\src\\proyectouniversae\\Dialogo.json");
+        String text = jsonManager.getText(eventId);
+        PantallaGame.jLabelTitulo.setText(text);
+    }
+
+    public static void updateTextParrafo(String eventId) {
+        JsonManager jsonManager = JsonManager.getInstance("C:\\Users\\zabal\\Documents\\GitHub\\PracticaUniversae\\src\\proyectouniversae\\Dialogo.json");
+        String text = jsonManager.getText(eventId);
+        PantallaGame.jTextParrafo.setText(text);
+    }
+
+    public static void resetImagenActualIndex() {
+        imagenActualIndex = 0;
+    }
+
+    public static void logoReset() {
+        // Crea una nueva instancia de PantallaPrincipal
+        PantallaPrincipal pantallaPrincipal = new PantallaPrincipal();
+        // Muestra la nueva instancia de PantallaPrincipal
+        pantallaPrincipal.setVisible(true);
+        // Resetea la variable imagenActualIndex
+        Controladora.resetImagenActualIndex();
+        // Actualiza imagenActualIndex en la nueva instancia de PantallaPrincipal
+        pantallaPrincipal.setImagenActualIndex(0); // O cualquier otro valor adecuado
+    }
+
+    public static void actualizarCirculos(int indiceImagen) {
+        JLabel[] jLabelCircle = {jLabelCircle1, jLabelCircle2, jLabelCircle3, jLabelCircle4, jLabelCircle5};
+        JLabel[] jLabelCircleFills = {jLabelCircleFill1, jLabelCircleFill2, jLabelCircleFill3, jLabelCircleFill4, jLabelCircleFill5};
+
+        // Ocultar todos los círculos
+        for (JLabel label : jLabelCircleFills) {
+            label.setVisible(false);
+        }
+
+        // Mostrar el círculo fill correspondiente al índice de la imagen seleccionada
+        switch (indiceImagen) {
+            case 0 ->
+                jLabelCircleFill1.setVisible(true);
+            case 1 ->
+                jLabelCircleFill2.setVisible(true);
+            case 2 ->
+                jLabelCircleFill3.setVisible(true);
+            case 3 ->
+                jLabelCircleFill4.setVisible(true);
+            case 4 ->
+                jLabelCircleFill5.setVisible(true);
+            default -> // Si el índice está fuera del rango válido, imprimir un mensaje de advertencia
+                System.err.println("Índice de imagen fuera de los límites.");
+        }
+    }
+
 }

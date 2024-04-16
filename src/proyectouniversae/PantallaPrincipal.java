@@ -514,7 +514,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        Controladora.updateTextTitulo("event1");
+        Controladora.updateTextParrafo("event7");
 
     }//GEN-LAST:event_labelMiniatura1MouseClicked
 
@@ -523,7 +524,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_labelMiniatura1MousePressed
 
     private void jLabelLogoUniversaeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLogoUniversaeMouseClicked
-        new PantallaPrincipal().setVisible(true);
+        Controladora.logoReset();
+
     }//GEN-LAST:event_jLabelLogoUniversaeMouseClicked
 
     private void jLabelIcon13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon13MouseExited
@@ -644,6 +646,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
+        Controladora.updateTextTitulo("event2");
+        Controladora.updateTextParrafo("event8");
 
     }//GEN-LAST:event_labelMiniatura2MouseClicked
 
@@ -653,6 +657,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
+        Controladora.updateTextTitulo("event3");
+        Controladora.updateTextParrafo("event9");
     }//GEN-LAST:event_labelMiniatura3MouseClicked
 
     private void labelMiniatura4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura4MouseClicked
@@ -661,6 +667,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
+        Controladora.updateTextTitulo("event4");
+        Controladora.updateTextParrafo("event10");
     }//GEN-LAST:event_labelMiniatura4MouseClicked
 
     private void labelMiniatura5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura5MouseClicked
@@ -669,6 +677,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
+        Controladora.updateTextTitulo("event5");
+        Controladora.updateTextParrafo("event11");
     }//GEN-LAST:event_labelMiniatura5MouseClicked
 
     private void labelMiniatura6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura6MouseClicked
@@ -677,7 +687,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
+        Controladora.updateTextTitulo("event6");
+        Controladora.updateTextParrafo("event12");
     }//GEN-LAST:event_labelMiniatura6MouseClicked
+    public void setImagenActualIndex(int index) {
+
+        PantallaGame.imagenActualIndex = index;
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

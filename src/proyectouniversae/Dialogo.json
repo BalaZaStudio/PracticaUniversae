@@ -1,7 +1,16 @@
 {
-    "name": "zabdev",
-    "apellido": "zabala",
-    "edad": "36",
-    
-    "equipos": []
+    "texts": {
+        "event1": "Embarque y desembarque en Helicoptero",
+        "event2": "Protocolo ante una hemorragia externa",
+        "event3": "Maniobras de extinción según la instalación",
+        "event4": "Tipologia y características de los EPIs",
+        "event5": "Señalización a helicóptero desde tierra",
+        "event6": "Rescate en ascensor",
+        "event7": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T.\n lleno estándar de las industrias desde el año 1500, cuando u",
+        "event8": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T.",
+        "event9": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T.",
+        "event10": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T.",
+        "event11": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T.",
+        "event12": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T."
+    }
 }

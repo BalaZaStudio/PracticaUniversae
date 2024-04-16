@@ -56,6 +56,9 @@ public class PantallaGame extends javax.swing.JFrame {
         jLabelBtnDer = new javax.swing.JLabel();
         jLabelComenzar = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        jLabelBarrita = new javax.swing.JLabel();
+        jLabelTitulo = new javax.swing.JLabel();
+        jTextParrafo = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
         jLabelIcon0 = new javax.swing.JLabel();
         jLabelIcon1 = new javax.swing.JLabel();
@@ -164,6 +167,25 @@ public class PantallaGame extends javax.swing.JFrame {
         jLabel15.setPreferredSize(new java.awt.Dimension(980, 463));
         jPanelBaseFondo.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 230, 790, -1));
         jLabel15.getAccessibleContext().setAccessibleParent(this);
+
+        jLabelBarrita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectouniversae/InterfazGame/Barrita aislada descripción.png"))); // NOI18N
+        jPanelBaseFondo.add(jLabelBarrita, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 760, 10, 40));
+
+        jLabelTitulo.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelTitulo.setFont(new java.awt.Font("Malgun Gothic", 1, 24)); // NOI18N
+        jLabelTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelBaseFondo.add(jLabelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 750, 760, 50));
+
+        jTextParrafo.setEditable(false);
+        jTextParrafo.setBackground(new java.awt.Color(255, 255, 255));
+        jTextParrafo.setColumns(20);
+        jTextParrafo.setFont(new java.awt.Font("Malgun Gothic", 1, 18)); // NOI18N
+        jTextParrafo.setForeground(new java.awt.Color(255, 255, 255));
+        jTextParrafo.setLineWrap(true);
+        jTextParrafo.setRows(5);
+        jTextParrafo.setToolTipText("");
+        jTextParrafo.setOpaque(false);
+        jPanelBaseFondo.add(jTextParrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 840, 900, 200));
 
         jPanel2.setOpaque(false);
 
@@ -392,7 +414,6 @@ public class PantallaGame extends javax.swing.JFrame {
 
     private void jLabelBtnIzqMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBtnIzqMouseClicked
 
-        // Si hay imágenes cargadas previamente y no estamos en la primera imagen, retroceder una imagen.
         if (imagenActualIndex > 0) {
             imagenActualIndex--; // Disminuye el índice de la imagen actual.
         } else {
@@ -401,12 +422,13 @@ public class PantallaGame extends javax.swing.JFrame {
         }
         // Muestra la imagen actual en el panel.
         Controladora.mostrarImagenActualEnPanel(listaImagenesCargadas);
+        // Actualiza los círculos correspondientes al nuevo índice de imagen
+        Controladora.actualizarCirculos(imagenActualIndex);
 
     }//GEN-LAST:event_jLabelBtnIzqMouseClicked
 
     private void jLabelBtnDerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBtnDerMouseClicked
 
-        // Si hay imágenes cargadas previamente y no estamos en la última imagen, avanzar una imagen.
         if (imagenActualIndex < listaImagenesCargadas.size() - 1) {
             imagenActualIndex++; // Incrementa el índice de la imagen actual.
         } else {
@@ -415,11 +437,14 @@ public class PantallaGame extends javax.swing.JFrame {
         }
         // Muestra la imagen actual en el panel.
         Controladora.mostrarImagenActualEnPanel(listaImagenesCargadas);
+        // Actualiza los círculos correspondientes al nuevo índice de imagen
+        Controladora.actualizarCirculos(imagenActualIndex);
 
     }//GEN-LAST:event_jLabelBtnDerMouseClicked
 
     private void jLabelLogoUniversaeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLogoUniversaeMouseClicked
-        new PantallaPrincipal().setVisible(true);
+
+        Controladora.logoReset();
     }//GEN-LAST:event_jLabelLogoUniversaeMouseClicked
 
     private void jLabelIcon0MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon0MouseEntered
@@ -534,25 +559,11 @@ public class PantallaGame extends javax.swing.JFrame {
     private void jLabelIcon13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon13MouseExited
         jLabelIcon13.setIcon(originalLogo[13]);
     }//GEN-LAST:event_jLabelIcon13MouseExited
-    public static void actualizarCirculos(int indiceImagen) {
-        JLabel[] jLabelCircles = {jLabelCircle1, jLabelCircle2, jLabelCircle3, jLabelCircle4, jLabelCircle5};
-        JLabel[] jLabelCircleFills = {jLabelCircleFill1, jLabelCircleFill2, jLabelCircleFill3, jLabelCircleFill4, jLabelCircleFill5};
-
-        // Ocultar todos los JLabel
-        for (JLabel label : jLabelCircles) {
-            label.setVisible(true);
-        }
-        for (JLabel label : jLabelCircleFills) {
-            label.setVisible(false);
-        }
-
-        // Mostrar el JLabel fill correspondiente al índice de la imagen seleccionada
-        jLabelCircleFills[indiceImagen].setVisible(true);
-    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabelBarrita;
     private javax.swing.JLabel jLabelBtnDer;
     private javax.swing.JLabel jLabelBtnIzq;
     public static javax.swing.JLabel jLabelCircle1;
@@ -582,9 +593,11 @@ public class PantallaGame extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabelIcon8;
     public static javax.swing.JLabel jLabelIcon9;
     private javax.swing.JLabel jLabelLogoUniversae;
+    public static javax.swing.JLabel jLabelTitulo;
     public static javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelBaseFondo;
     private javax.swing.JPanel jPanelContent;
+    public static javax.swing.JTextArea jTextParrafo;
     private javax.swing.JLabel labelFondoBase;
     // End of variables declaration//GEN-END:variables
 }
