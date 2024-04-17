@@ -6,11 +6,8 @@ package proyectouniversae;
 public class ProyectoUniversae {
 
     public static void main(String[] args) {
-
         PantallaPrincipal princ = new PantallaPrincipal();
-        princ.setVisible(true);
-        
-        
+        princ.setVisible(true);            
         
     }
 

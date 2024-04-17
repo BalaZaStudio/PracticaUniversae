@@ -5,6 +5,7 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import static proyectouniversae.Controladora.escalarImagen;
+import static proyectouniversae.PantallaPrincipal.imagenActualIndex;
 
 /**
  *
@@ -12,7 +13,6 @@ import static proyectouniversae.Controladora.escalarImagen;
  */
 public class PantallaGame extends javax.swing.JFrame {
 
-    public static int imagenActualIndex = 0; // Variable Imagen Actual
     public static final List<ImageIcon> imagenes = new ArrayList<>();
     public static final List<ImageIcon> imagenes1 = new ArrayList<>();
     public static final List<ImageIcon> imagenes2 = new ArrayList<>();
@@ -416,14 +416,25 @@ public class PantallaGame extends javax.swing.JFrame {
 
         if (imagenActualIndex > 0) {
             imagenActualIndex--; // Disminuye el índice de la imagen actual.
+
         } else {
             // Si estamos en la primera imagen, establece el índice al de la última imagen.
             imagenActualIndex = listaImagenesCargadas.size() - 1;
         }
+
+        // Ajustar el índice si es mayor que 3
+        if (imagenActualIndex > 4) {
+            imagenActualIndex = 4;
+        }
+
         // Muestra la imagen actual en el panel.
         Controladora.mostrarImagenActualEnPanel(listaImagenesCargadas);
-        // Actualiza los círculos correspondientes al nuevo índice de imagen
-        Controladora.actualizarCirculos(imagenActualIndex);
+        // Actualiza los círculos correspondientes al nuevo índice de imagen si es válido
+        if (imagenActualIndex >= 0 && imagenActualIndex < listaImagenesCargadas.size()) {
+            Controladora.actualizarCirculos(imagenActualIndex);
+        } else {
+            System.err.println("Índice de imagen fuera de los límites.");
+        }
 
     }//GEN-LAST:event_jLabelBtnIzqMouseClicked
 
@@ -435,10 +446,21 @@ public class PantallaGame extends javax.swing.JFrame {
             // Si estamos en la última imagen, establece el índice al de la primera imagen.
             imagenActualIndex = 0;
         }
+
+        // Ajustar el índice si es mayor que 3
+        if (imagenActualIndex > 4) {
+            imagenActualIndex = 0;
+        }
+
         // Muestra la imagen actual en el panel.
         Controladora.mostrarImagenActualEnPanel(listaImagenesCargadas);
-        // Actualiza los círculos correspondientes al nuevo índice de imagen
-        Controladora.actualizarCirculos(imagenActualIndex);
+        // Actualiza los círculos correspondientes al nuevo índice de imagen si es válido
+        if (imagenActualIndex >= 0 && imagenActualIndex < listaImagenesCargadas.size()) {
+            Controladora.actualizarCirculos(imagenActualIndex);
+        } else {
+            System.err.println("Índice de imagen fuera de los límites.");
+        }
+
 
     }//GEN-LAST:event_jLabelBtnDerMouseClicked
 

@@ -20,6 +20,7 @@ import static proyectouniversae.PantallaGame.imagenes5;
  */
 public class PantallaPrincipal extends javax.swing.JFrame {
 
+    public static int imagenActualIndex = 0; // Variable Imagen Actual
     private final ImageIcon[] originalIcon = new ImageIcon[6];
     private final ImageIcon[] originalLogo = new ImageIcon[14];
 
@@ -514,8 +515,15 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-        Controladora.updateTextTitulo("event1");
-        Controladora.updateTextParrafo("event7");
+
+        // Supongamos que tienes los índices del grado y del juego asociados a labelMiniatura1
+        int indexGrado = 0; // Por ejemplo, el primer grado
+        int indexJuego = 0; // Por ejemplo, el primer juego del primer grado
+
+        // Llama a los métodos updateTextTitulo y updateTextParrafo con los índices del grado y del juego
+        Controladora.updateTextTitulo(indexGrado, indexJuego);
+        Controladora.updateTextParrafo(indexGrado, indexJuego);
+
 
     }//GEN-LAST:event_labelMiniatura1MouseClicked
 
@@ -646,8 +654,14 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-        Controladora.updateTextTitulo("event2");
-        Controladora.updateTextParrafo("event8");
+
+        // Supongamos que tienes los índices del grado y del juego asociados a labelMiniatura1
+        int indexGrado = 0; // Por ejemplo, el primer grado
+        int indexJuego = 1; // Por ejemplo, el primer juego del primer grado
+
+        // Llama a los métodos updateTextTitulo y updateTextParrafo con los índices del grado y del juego
+        Controladora.updateTextTitulo(indexGrado, indexJuego);
+        Controladora.updateTextParrafo(indexGrado, indexJuego);
 
     }//GEN-LAST:event_labelMiniatura2MouseClicked
 
@@ -657,8 +671,14 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-        Controladora.updateTextTitulo("event3");
-        Controladora.updateTextParrafo("event9");
+
+        // Supongamos que tienes los índices del grado y del juego asociados a labelMiniatura1
+        int indexGrado = 0; // Por ejemplo, el primer grado
+        int indexJuego = 2; // Por ejemplo, el primer juego del primer grado
+
+        // Llama a los métodos updateTextTitulo y updateTextParrafo con los índices del grado y del juego
+        Controladora.updateTextTitulo(indexGrado, indexJuego);
+        Controladora.updateTextParrafo(indexGrado, indexJuego);
     }//GEN-LAST:event_labelMiniatura3MouseClicked
 
     private void labelMiniatura4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura4MouseClicked
@@ -667,8 +687,14 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-        Controladora.updateTextTitulo("event4");
-        Controladora.updateTextParrafo("event10");
+
+        // Supongamos que tienes los índices del grado y del juego asociados a labelMiniatura1
+        int indexGrado = 0; // Por ejemplo, el primer grado
+        int indexJuego = 3; // Por ejemplo, el primer juego del primer grado
+
+        // Llama a los métodos updateTextTitulo y updateTextParrafo con los índices del grado y del juego
+        Controladora.updateTextTitulo(indexGrado, indexJuego);
+        Controladora.updateTextParrafo(indexGrado, indexJuego);
     }//GEN-LAST:event_labelMiniatura4MouseClicked
 
     private void labelMiniatura5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura5MouseClicked
@@ -677,8 +703,14 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-        Controladora.updateTextTitulo("event5");
-        Controladora.updateTextParrafo("event11");
+
+        // Supongamos que tienes los índices del grado y del juego asociados a labelMiniatura1
+        int indexGrado = 0; // Por ejemplo, el primer grado
+        int indexJuego = 4; // Por ejemplo, el primer juego del primer grado
+
+        // Llama a los métodos updateTextTitulo y updateTextParrafo con los índices del grado y del juego
+        Controladora.updateTextTitulo(indexGrado, indexJuego);
+        Controladora.updateTextParrafo(indexGrado, indexJuego);
     }//GEN-LAST:event_labelMiniatura5MouseClicked
 
     private void labelMiniatura6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura6MouseClicked
@@ -687,12 +719,18 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-        Controladora.updateTextTitulo("event6");
-        Controladora.updateTextParrafo("event12");
-    }//GEN-LAST:event_labelMiniatura6MouseClicked
-    public void setImagenActualIndex(int index) {
 
-        PantallaGame.imagenActualIndex = index;
+        // Supongamos que tienes los índices del grado y del juego asociados a labelMiniatura1
+        int indexGrado = 0; // Por ejemplo, el primer grado
+        int indexJuego = 5; // Por ejemplo, el primer juego del primer grado
+
+        // Llama a los métodos updateTextTitulo y updateTextParrafo con los índices del grado y del juego
+        Controladora.updateTextTitulo(indexGrado, indexJuego);
+        Controladora.updateTextParrafo(indexGrado, indexJuego);
+    }//GEN-LAST:event_labelMiniatura6MouseClicked
+    public static void setImagenActualIndex(int index) {
+
+        PantallaPrincipal.imagenActualIndex = index;
     }
 
 
