@@ -459,16 +459,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void labelMiniatura1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MouseEntered
-        escalarImagen(labelMiniatura1, 450, 350);
-
-    }//GEN-LAST:event_labelMiniatura1MouseEntered
-
-    private void labelMiniatura1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MouseExited
-        labelMiniatura1.setIcon(originalIcon[0]); // Reemplaza 'iconOriginal' con tu ícono original
-
-    }//GEN-LAST:event_labelMiniatura1MouseExited
-
     private void labelMiniatura3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura3MouseEntered
         escalarImagen(labelMiniatura3, 450, 350);
     }//GEN-LAST:event_labelMiniatura3MouseEntered
@@ -508,28 +498,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private void labelMiniatura6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura6MouseExited
         labelMiniatura6.setIcon(originalIcon[5]);
     }//GEN-LAST:event_labelMiniatura6MouseExited
-
-    private void labelMiniatura1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MouseClicked
-        try {
-            reproducirSonidoYMostrarImagenes(imagenes);
-        } catch (JavaLayerException ex) {
-            Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        // Supongamos que tienes los índices del grado y del juego asociados a labelMiniatura1
-        int indexGrado = 0; // Por ejemplo, el primer grado
-        int indexJuego = 0; // Por ejemplo, el primer juego del primer grado
-
-        // Llama a los métodos updateTextTitulo y updateTextParrafo con los índices del grado y del juego
-        Controladora.updateTextTitulo(indexGrado, indexJuego);
-        Controladora.updateTextParrafo(indexGrado, indexJuego);
-
-
-    }//GEN-LAST:event_labelMiniatura1MouseClicked
-
-    private void labelMiniatura1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MousePressed
-
-    }//GEN-LAST:event_labelMiniatura1MousePressed
 
     private void jLabelLogoUniversaeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelLogoUniversaeMouseClicked
         Controladora.logoReset();
@@ -657,7 +625,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         // Supongamos que tienes los índices del grado y del juego asociados a labelMiniatura1
         int indexGrado = 0; // Por ejemplo, el primer grado
-        int indexJuego = 1; // Por ejemplo, el primer juego del primer grado
+        int indexJuego = 1; // Por ejemplo, el segundo juego del primer grado
 
         // Llama a los métodos updateTextTitulo y updateTextParrafo con los índices del grado y del juego
         Controladora.updateTextTitulo(indexGrado, indexJuego);
@@ -674,7 +642,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         // Supongamos que tienes los índices del grado y del juego asociados a labelMiniatura1
         int indexGrado = 0; // Por ejemplo, el primer grado
-        int indexJuego = 2; // Por ejemplo, el primer juego del primer grado
+        int indexJuego = 2; // Por ejemplo, el tercer juego del primer grado
 
         // Llama a los métodos updateTextTitulo y updateTextParrafo con los índices del grado y del juego
         Controladora.updateTextTitulo(indexGrado, indexJuego);
@@ -690,7 +658,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         // Supongamos que tienes los índices del grado y del juego asociados a labelMiniatura1
         int indexGrado = 0; // Por ejemplo, el primer grado
-        int indexJuego = 3; // Por ejemplo, el primer juego del primer grado
+        int indexJuego = 3; // Por ejemplo, el cuarto juego del primer grado
 
         // Llama a los métodos updateTextTitulo y updateTextParrafo con los índices del grado y del juego
         Controladora.updateTextTitulo(indexGrado, indexJuego);
@@ -706,7 +674,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         // Supongamos que tienes los índices del grado y del juego asociados a labelMiniatura1
         int indexGrado = 0; // Por ejemplo, el primer grado
-        int indexJuego = 4; // Por ejemplo, el primer juego del primer grado
+        int indexJuego = 4; // Por ejemplo, el quinto juego del primer grado
 
         // Llama a los métodos updateTextTitulo y updateTextParrafo con los índices del grado y del juego
         Controladora.updateTextTitulo(indexGrado, indexJuego);
@@ -722,12 +690,45 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         // Supongamos que tienes los índices del grado y del juego asociados a labelMiniatura1
         int indexGrado = 0; // Por ejemplo, el primer grado
-        int indexJuego = 5; // Por ejemplo, el primer juego del primer grado
+        int indexJuego = 5; // Por ejemplo, el sexto juego del primer grado
 
         // Llama a los métodos updateTextTitulo y updateTextParrafo con los índices del grado y del juego
         Controladora.updateTextTitulo(indexGrado, indexJuego);
         Controladora.updateTextParrafo(indexGrado, indexJuego);
     }//GEN-LAST:event_labelMiniatura6MouseClicked
+
+    private void labelMiniatura1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MousePressed
+
+    }//GEN-LAST:event_labelMiniatura1MousePressed
+
+    private void labelMiniatura1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MouseExited
+        labelMiniatura1.setIcon(originalIcon[0]); // Reemplaza 'iconOriginal' con tu ícono original
+    }//GEN-LAST:event_labelMiniatura1MouseExited
+
+    private void labelMiniatura1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MouseEntered
+        escalarImagen(labelMiniatura1, 450, 350);
+    }//GEN-LAST:event_labelMiniatura1MouseEntered
+
+    private void labelMiniatura1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MouseClicked
+        try {
+            reproducirSonidoYMostrarImagenes(imagenes);
+        } catch (JavaLayerException ex) {
+            Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        // Supongamos que tienes los índices del grado y del juego asociados a labelMiniatura1
+        int indexGrado = 0; // Por ejemplo, el primer grado
+        int indexJuego = 0; // Por ejemplo, el primer juego del primer grado
+
+        // Llama a los métodos updateTextTitulo y updateTextParrafo con los índices del grado y del juego
+        Controladora.updateTextTitulo(indexGrado, indexJuego);
+        Controladora.updateTextParrafo(indexGrado, indexJuego);
+
+    }//GEN-LAST:event_labelMiniatura1MouseClicked
+    
+    
+    
+    
     public static void setImagenActualIndex(int index) {
 
         PantallaPrincipal.imagenActualIndex = index;
