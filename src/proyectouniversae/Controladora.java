@@ -10,6 +10,8 @@ import javax.swing.JLabel;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 import proyectouniversae.JSON.JsonManager;
+import static proyectouniversae.PantallaGame.jLabelTitulo;
+import static proyectouniversae.PantallaGame.jTextParrafo;
 import static proyectouniversae.PantallaGame.listaImagenesCargadas;
 import static proyectouniversae.PantallaPrincipal.imagenActualIndex;
 
@@ -113,13 +115,13 @@ public class Controladora {
     public static void updateTextTitulo(int indexGrado, int indexJuego) {
         JsonManager jsonManager = JsonManager.getInstance("C:\\Users\\zabal\\Documents\\GitHub\\PracticaUniversae\\src\\proyectouniversae\\JSON\\Dialogo.json");
         String titulo = jsonManager.getTituloJuego(indexGrado, indexJuego);
-        PantallaGame.jLabelTitulo.setText(titulo);
+        jLabelTitulo.setText(titulo);
     }
 
     public static void updateTextParrafo(int indexGrado, int indexJuego) {
         JsonManager jsonManager = JsonManager.getInstance("C:\\Users\\zabal\\Documents\\GitHub\\PracticaUniversae\\src\\proyectouniversae\\JSON\\Dialogo.json");
         String descripcion = jsonManager.getDescripcion(indexGrado, indexJuego);
-        PantallaGame.jTextParrafo.setText(descripcion);
+       jTextParrafo.setText(descripcion);
     }
 
     public static void resetImagenActualIndex() {

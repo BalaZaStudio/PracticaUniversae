@@ -56,24 +56,25 @@ public class JsonManager {
         return grados.grados.get(indexGrado).juegos.get(indexJuego).titulo;
     }
 
-    // Clase que representa la estructura de datos de los grados disponibles
-    private static class Grados {
+   // Clase que representa la estructura de datos de los grados disponibles
+private static class Grados {
 
-        // Lista de objetos Grado
-        private List<Grado> grados;
-        // Mapa de textos adicionales relacionados con los grados
-        private Map<String, String> texts;
+    // Lista de objetos Grado
+    private List<Grado> grados;
+    // Mapa de textos adicionales relacionados con los grados
+    private Map<String, String> texts;
 
-        // Método para obtener la lista de grados
-        public List<Grado> getGrados() {
-            return grados;
-        }
-
-        // Método para obtener el mapa de textos
-        public Map<String, String> getTexts() {
-            return texts;
-        }
+    // Método para obtener la lista de grados
+    public List<Grado> getGrados() {
+        return grados;
     }
+
+    // Método para obtener el mapa de textos
+    public Map<String, String> getTexts() {
+        return texts;
+    }
+}
+
 
     // Clase que representa un grado específico
     private static class Grado {
