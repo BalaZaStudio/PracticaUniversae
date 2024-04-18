@@ -32,18 +32,18 @@ public class Controladora {
     }
 
     public static void inicializarCargaImagenes(List<ImageIcon> listaImagenes) {
-        String[] nombresHelicoptero = {"Helicoptero0.png", "Helicoptero1.png", "Helicoptero2.png", "Helicoptero3.png", "Helicoptero4.png"};
+        String[] nombresEmbarque = {"Embarque0.png", "Embarque1.png", "Embarque2.png", "Embarque3.png", "Embarque4.png"};
         String[] nombresHemorragia = {"Hemorragia0.png", "Hemorragia1.png", "Hemorragia2.png", "Hemorragia3.png", "Hemorragia4.png"};
         String[] nombresExtincion = {"Extincion0.png", "Extincion1.png", "Extincion2.png", "Extincion3.png", "Extincion4.png"};
         String[] nombresEPIS = {"EPIS0.png", "EPIS1.png", "EPIS2.png", "EPIS3.png", "EPIS4.png"};
-        String[] nombresHelicoptero1 = {"Helicoptero0.png", "Helicoptero1.png", "Helicoptero2.png", "Helicoptero3.png", "Helicoptero4.png"};
+        String[] nombresHelicoptero = {"Helicoptero0.png", "Helicoptero1.png", "Helicoptero2.png", "Helicoptero3.png", "Helicoptero4.png"};
         String[] nombresAscensor = {"Ascensor0.png", "Ascensor1.png", "Ascensor2.png", "Ascensor3.png", "Ascensor4.png"};
 
-        cargarImagenes(PantallaGame.imagenes, "Helicoptero", nombresHelicoptero);
+        cargarImagenes(PantallaGame.imagenes, "Embarque", nombresEmbarque);
         cargarImagenes(PantallaGame.imagenes1, "Hemorragia", nombresHemorragia);
         cargarImagenes(PantallaGame.imagenes2, "Extincion", nombresExtincion);
         cargarImagenes(PantallaGame.imagenes3, "EPIS", nombresEPIS);
-        cargarImagenes(PantallaGame.imagenes4, "Helicoptero", nombresHelicoptero1);
+        cargarImagenes(PantallaGame.imagenes4, "Helicoptero", nombresHelicoptero);
         cargarImagenes(PantallaGame.imagenes5, "Ascensor", nombresAscensor);
 
 // La lista listaImagenesCargadas se asigna dependiendo de si listaImagenes está vacía o no.
