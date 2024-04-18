@@ -23,7 +23,7 @@ import static proyectouniversae.PantallaGame.imagenes5;
 public class PantallaPrincipal extends javax.swing.JFrame {
 
     public static int imagenActualIndex = 0; // Variable Imagen Actual
-    private final ImageIcon[] originalIcon = new ImageIcon[6];
+    public static ImageIcon[] originalIcon = new ImageIcon[6];
     private final ImageIcon[] originalLogo = new ImageIcon[14];
     public static int indexGrado; // Índice del grado seleccionado
     public static int indexJuego; // Índice del juego seleccionado
@@ -662,24 +662,24 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon0MouseEntered
 
     private void labelMiniatura2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura2MouseClicked
-        labelMiniatura2MouseClicked2();
+        labelMiniatura2MouseClicked2(nuevoIndexGrado, nuevoIndexJuego);
 
     }//GEN-LAST:event_labelMiniatura2MouseClicked
 
     private void labelMiniatura3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura3MouseClicked
-        labelMiniatura3MouseClicked3();
+        labelMiniatura3MouseClicked3(nuevoIndexGrado, nuevoIndexJuego);
     }//GEN-LAST:event_labelMiniatura3MouseClicked
 
     private void labelMiniatura4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura4MouseClicked
-        labelMiniatura4MouseClicked4();
+        labelMiniatura4MouseClicked4(nuevoIndexGrado, nuevoIndexJuego);
     }//GEN-LAST:event_labelMiniatura4MouseClicked
 
     private void labelMiniatura5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura5MouseClicked
-        labelMiniatura5MouseClicked5();
+        labelMiniatura5MouseClicked5(nuevoIndexGrado, nuevoIndexJuego);
     }//GEN-LAST:event_labelMiniatura5MouseClicked
 
     private void labelMiniatura6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura6MouseClicked
-        labelMiniatura6MouseClicked6();
+        labelMiniatura6MouseClicked6(nuevoIndexGrado, nuevoIndexJuego);
     }//GEN-LAST:event_labelMiniatura6MouseClicked
 
     private void labelMiniatura1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MouseExited
@@ -693,21 +693,15 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private void actualizarIndices(int indexGrado, int indexJuego) {
         System.out.println("Índices originales: indexGrado = " + indexGrado + ", indexJuego = " + indexJuego);
 
-        // Número total de miniaturas
-        int numMiniaturas = 6; // Ajusta este valor según la cantidad de miniaturas que tengas
+        // Calcula los nuevos índices para la primera miniatura
+        nuevoIndexGrado = indexGrado;
+        nuevoIndexJuego = indexJuego;
 
-        // Itera sobre cada miniatura
-        for (int i = 1; i <= numMiniaturas; i++) {
-            // Calcula los nuevos índices para cada miniatura
-            nuevoIndexGrado = indexGrado;
-            nuevoIndexJuego = indexJuego + i - 1; // Resta 1 para ajustar el índice
+        System.out.println("Nuevo índice para miniatura 1: indexGrado = " + nuevoIndexGrado + ", indexJuego = " + nuevoIndexJuego);
 
-            System.out.println("Nuevo índice para miniatura " + i + ": indexGrado = " + nuevoIndexGrado + ", indexJuego = " + nuevoIndexJuego);
-
-            // Actualiza los índices y llama a los métodos de actualización de textos
-            updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego);
-            updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego);
-        }
+        // Actualiza los índices y llama a los métodos de actualización de textos
+        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego);
+        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego);
     }
 
 
@@ -722,7 +716,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon1MouseClicked
 
     private void labelMiniaturaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniaturaMouseClicked
-        labelMiniatura1MouseClicked1();
+        labelMiniatura1MouseClicked1(nuevoIndexGrado, nuevoIndexJuego);
     }//GEN-LAST:event_labelMiniaturaMouseClicked
 
     private void jLabelIcon2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon2MouseClicked
@@ -773,7 +767,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         actualizarIndices(13, 0);
     }//GEN-LAST:event_jLabelIcon13MouseClicked
 
-    private void labelMiniatura1MouseClicked1() {
+    private void labelMiniatura1MouseClicked1(int indexGrado, int indexJuego) {
         try {
             reproducirSonidoYMostrarImagenes(imagenes); // Cambiar 'imagenes1' por la lista correspondiente
         } catch (JavaLayerException ex) {
@@ -782,67 +776,73 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego);
         updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego);
+        System.out.println("Nuevo índice para miniatura1: indexGrado = " + indexGrado + ", indexJuego = " + indexJuego);
     }
 
-    private void labelMiniatura2MouseClicked2() {
+    private void labelMiniatura2MouseClicked2(int indexGrado, int indexJuego) {
         try {
             reproducirSonidoYMostrarImagenes(imagenes1); // Cambiar 'imagenes2' por la lista correspondiente
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego);
-        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego);
+        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego + 1);
+        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego + 1);
+        System.out.println("Nuevo índice para miniatura2: indexGrado = " + indexGrado + ", indexJuego = " + (indexJuego + 1));
     }
 
-    private void labelMiniatura3MouseClicked3() {
+    private void labelMiniatura3MouseClicked3(int indexGrado, int indexJuego) {
         try {
             reproducirSonidoYMostrarImagenes(imagenes2); // Cambiar 'imagenes2' por la lista correspondiente
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego);
-        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego);
+        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego + 2);
+        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego + 2);
+        System.out.println("Nuevo índice para miniatura2: indexGrado = " + indexGrado + ", indexJuego = " + (indexJuego + 1));
     }
 
-    private void labelMiniatura4MouseClicked4() {
+    private void labelMiniatura4MouseClicked4(int indexGrado, int indexJuego) {
         try {
             reproducirSonidoYMostrarImagenes(imagenes3); // Cambiar 'imagenes2' por la lista correspondiente
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego);
-        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego);
+        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego + 3);
+        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego + 3);
+        System.out.println("Nuevo índice para miniatura2: indexGrado = " + indexGrado + ", indexJuego = " + (indexJuego + 1));
     }
 
-    private void labelMiniatura5MouseClicked5() {
+    private void labelMiniatura5MouseClicked5(int indexGrado, int indexJuego) {
         try {
             reproducirSonidoYMostrarImagenes(imagenes4); // Cambiar 'imagenes2' por la lista correspondiente
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego);
-        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego);
+        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego + 4);
+        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego + 4);
+        System.out.println("Nuevo índice para miniatura2: indexGrado = " + indexGrado + ", indexJuego = " + (indexJuego + 1));
     }
 
-    private void labelMiniatura6MouseClicked6() {
+    private void labelMiniatura6MouseClicked6(int indexGrado, int indexJuego) {
         try {
             reproducirSonidoYMostrarImagenes(imagenes5); // Cambiar 'imagenes2' por la lista correspondiente
         } catch (JavaLayerException ex) {
             Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego);
-        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego);
+        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego + 5);
+        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego + 5);
+        System.out.println("Nuevo índice para miniatura2: indexGrado = " + indexGrado + ", indexJuego = " + (indexJuego + 1));
     }
 
     public static void setImagenActualIndex(int index) {
 
         PantallaPrincipal.imagenActualIndex = index;
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JLabel jLabelIcon0;

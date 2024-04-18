@@ -21,6 +21,9 @@ import static proyectouniversae.PantallaPrincipal.imagenActualIndex;
  */
 public class Controladora {
 
+    //Lista de listas de imágenes
+    private static final List<List<ImageIcon>> imagenesList = new ArrayList<>();
+
     public static void cargarImagenes(List<ImageIcon> listaImagenes, String carpeta, String[] nombresArchivos) {
         for (String nombreArchivo : nombresArchivos) {
             ImageIcon imagen = new ImageIcon("C:/Users/zabal/Documents/GitHub/PracticaUniversae/src/proyectouniversae/InterfazGame/Miniaturas/" + carpeta + "/" + nombreArchivo);
@@ -121,7 +124,7 @@ public class Controladora {
     public static void updateTextParrafo(int indexGrado, int indexJuego) {
         JsonManager jsonManager = JsonManager.getInstance("C:\\Users\\zabal\\Documents\\GitHub\\PracticaUniversae\\src\\proyectouniversae\\JSON\\Dialogo.json");
         String descripcion = jsonManager.getDescripcion(indexGrado, indexJuego);
-       jTextParrafo.setText(descripcion);
+        jTextParrafo.setText(descripcion);
     }
 
     public static void resetImagenActualIndex() {
