@@ -1,11 +1,13 @@
 package proyectouniversae;
 
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javazoom.jl.decoder.JavaLayerException;
 import static proyectouniversae.Controladora.escalarImagen;
+import static proyectouniversae.Controladora.labelMiniaturaMouseClickedGeneral;
 import static proyectouniversae.Controladora.reproducirSonidoYMostrarImagenes;
 import static proyectouniversae.Controladora.updateTextParrafo;
 import static proyectouniversae.Controladora.updateTextTitulo;
@@ -662,24 +664,44 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon0MouseEntered
 
     private void labelMiniatura2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura2MouseClicked
-        labelMiniatura2MouseClicked2(nuevoIndexGrado, nuevoIndexJuego);
 
+        try {
+            labelMiniaturaMouseClickedGeneral(1, indexJuego, imagenes1);
+        } catch (JavaLayerException ex) {
+            Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_labelMiniatura2MouseClicked
 
     private void labelMiniatura3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura3MouseClicked
-        labelMiniatura3MouseClicked3(nuevoIndexGrado, nuevoIndexJuego);
+        try {
+            labelMiniaturaMouseClickedGeneral(2, indexJuego, imagenes2);
+        } catch (JavaLayerException ex) {
+            Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_labelMiniatura3MouseClicked
 
     private void labelMiniatura4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura4MouseClicked
-        labelMiniatura4MouseClicked4(nuevoIndexGrado, nuevoIndexJuego);
+        try {
+            labelMiniaturaMouseClickedGeneral(3, indexJuego, imagenes3);
+        } catch (JavaLayerException ex) {
+            Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_labelMiniatura4MouseClicked
 
     private void labelMiniatura5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura5MouseClicked
-        labelMiniatura5MouseClicked5(nuevoIndexGrado, nuevoIndexJuego);
+        try {
+            labelMiniaturaMouseClickedGeneral(4, indexJuego, imagenes4);
+        } catch (JavaLayerException ex) {
+            Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_labelMiniatura5MouseClicked
 
     private void labelMiniatura6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura6MouseClicked
-        labelMiniatura6MouseClicked6(nuevoIndexGrado, nuevoIndexJuego);
+        try {
+            labelMiniaturaMouseClickedGeneral(5, indexJuego, imagenes5);
+        } catch (JavaLayerException ex) {
+            Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_labelMiniatura6MouseClicked
 
     private void labelMiniatura1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniatura1MouseExited
@@ -716,7 +738,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelIcon1MouseClicked
 
     private void labelMiniaturaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelMiniaturaMouseClicked
-        labelMiniatura1MouseClicked1(nuevoIndexGrado, nuevoIndexJuego);
+        try {
+            labelMiniaturaMouseClickedGeneral(0, indexJuego, imagenes);
+        } catch (JavaLayerException ex) {
+            Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_labelMiniaturaMouseClicked
 
     private void jLabelIcon2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelIcon2MouseClicked
@@ -767,76 +793,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         actualizarIndices(13, 0);
     }//GEN-LAST:event_jLabelIcon13MouseClicked
 
-    private void labelMiniatura1MouseClicked1(int indexGrado, int indexJuego) {
-        try {
-            reproducirSonidoYMostrarImagenes(imagenes); // Cambiar 'imagenes1' por la lista correspondiente
-        } catch (JavaLayerException ex) {
-            Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego);
-        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego);
-        System.out.println("Nuevo índice para miniatura1: indexGrado = " + indexGrado + ", indexJuego = " + indexJuego);
-    }
-
-    private void labelMiniatura2MouseClicked2(int indexGrado, int indexJuego) {
-        try {
-            reproducirSonidoYMostrarImagenes(imagenes1); // Cambiar 'imagenes2' por la lista correspondiente
-        } catch (JavaLayerException ex) {
-            Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego + 1);
-        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego + 1);
-        System.out.println("Nuevo índice para miniatura2: indexGrado = " + indexGrado + ", indexJuego = " + (indexJuego + 1));
-    }
-
-    private void labelMiniatura3MouseClicked3(int indexGrado, int indexJuego) {
-        try {
-            reproducirSonidoYMostrarImagenes(imagenes2); // Cambiar 'imagenes2' por la lista correspondiente
-        } catch (JavaLayerException ex) {
-            Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego + 2);
-        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego + 2);
-        System.out.println("Nuevo índice para miniatura2: indexGrado = " + indexGrado + ", indexJuego = " + (indexJuego + 1));
-    }
-
-    private void labelMiniatura4MouseClicked4(int indexGrado, int indexJuego) {
-        try {
-            reproducirSonidoYMostrarImagenes(imagenes3); // Cambiar 'imagenes2' por la lista correspondiente
-        } catch (JavaLayerException ex) {
-            Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego + 3);
-        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego + 3);
-        System.out.println("Nuevo índice para miniatura2: indexGrado = " + indexGrado + ", indexJuego = " + (indexJuego + 1));
-    }
-
-    private void labelMiniatura5MouseClicked5(int indexGrado, int indexJuego) {
-        try {
-            reproducirSonidoYMostrarImagenes(imagenes4); // Cambiar 'imagenes2' por la lista correspondiente
-        } catch (JavaLayerException ex) {
-            Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego + 4);
-        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego + 4);
-        System.out.println("Nuevo índice para miniatura2: indexGrado = " + indexGrado + ", indexJuego = " + (indexJuego + 1));
-    }
-
-    private void labelMiniatura6MouseClicked6(int indexGrado, int indexJuego) {
-        try {
-            reproducirSonidoYMostrarImagenes(imagenes5); // Cambiar 'imagenes2' por la lista correspondiente
-        } catch (JavaLayerException ex) {
-            Logger.getLogger(PantallaPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego + 5);
-        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego + 5);
-        System.out.println("Nuevo índice para miniatura2: indexGrado = " + indexGrado + ", indexJuego = " + (indexJuego + 1));
-    }
+ 
 
     public static void setImagenActualIndex(int index) {
 

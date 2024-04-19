@@ -14,6 +14,8 @@ import static proyectouniversae.PantallaGame.jLabelTitulo;
 import static proyectouniversae.PantallaGame.jTextParrafo;
 import static proyectouniversae.PantallaGame.listaImagenesCargadas;
 import static proyectouniversae.PantallaPrincipal.imagenActualIndex;
+import static proyectouniversae.PantallaPrincipal.nuevoIndexGrado;
+import static proyectouniversae.PantallaPrincipal.nuevoIndexJuego;
 
 /**
  *
@@ -23,6 +25,14 @@ public class Controladora {
 
     //Lista de listas de imágenes
     private static final List<List<ImageIcon>> imagenesList = new ArrayList<>();
+
+    public static void labelMiniaturaMouseClickedGeneral(int indexGrado, int indexJuego, List<ImageIcon> imagenes) throws JavaLayerException {
+        reproducirSonidoYMostrarImagenes(imagenes);
+
+        updateTextTitulo(nuevoIndexGrado, nuevoIndexJuego + indexGrado);
+        updateTextParrafo(nuevoIndexGrado, nuevoIndexJuego + indexGrado);
+        System.out.println("Nuevo índice para miniatura: indexGrado = " + indexGrado + ", indexJuego = " + (indexJuego + 1));
+    }
 
     public static void cargarImagenes(List<ImageIcon> listaImagenes, String carpeta, String[] nombresArchivos) {
         for (String nombreArchivo : nombresArchivos) {
